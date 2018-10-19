@@ -9,3 +9,8 @@
 article{
 	padding-top: 70px;
 }
+
+.teamMember p, .teamMember a{
+	width: 100%;
+	text-align: center;
+}
