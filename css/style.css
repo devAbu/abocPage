@@ -1,10 +1,13 @@
-#landing {
-	padding-top: 56px;
+#landing, body {
     background-image: url('../images/landing.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+}
+
+#landing{
+	padding-top: 56px;
 }
 
 #landing h1{
@@ -54,9 +57,18 @@
 
 article{
 	padding-top: 70px;
+	padding-bottom: 70px;
 }
 
 .teamMember p, .teamMember a{
 	width: 100%;
 	text-align: center;
+}
+#aboutUs, #team{
+	background-color: white;
+	width: 100%;
+}
+#skills, #projects{
+	background: rgba(255,255,255,0.4);
+	/*color: #17a2b8;*/
 }
