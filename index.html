@@ -12,6 +12,7 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Custom styles for this template -->
 	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -19,7 +20,7 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-		<a class="navbar-brand" href="#">ABOC</a>
+		<a class="navbar-brand" href="#landing">ABOC</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -42,17 +43,19 @@
 		</div>
 	</nav>
 
-	<section id="jumbotron" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
+	<section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
         <div class="container text-center hidden">
             <h1 class="display-1 text-primary text-uppercase">ABOC</h1>
             <p class="display-4 d-none d-sm-block"></p>
             <p class="lead">Computer Science and IT engineers</p>
             <p class="lead">The best offers and price!</p>
             <p class="text-primary h5 mb-3">Visit us on:</p>
-            <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary mb-1">
-                <i class="fab fa-instagram mr-2" aria-hidden="true"></i>Instagram</a>
-            <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary mb-1">
-                <i class="fab fa-facebook mr-2" aria-hidden="true"></i>Facebook</a>
+            <div>    
+                <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
+                <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
+            </div>
         </div>
     </section>
 
@@ -235,18 +238,10 @@ We offer --> Creating a professional website, mobile applications (Android and i
     <!-- Bootstrap core JavaScript
     	================================================== -->
     	<!-- Placed at the end of the document so the pages load faster -->
-    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    	<script src="js/vendor/popper.min.js"></script>
+    	<script src="js/jQuery.js"></script>
     	<script src="js/bootstrap.min.js"></script>
-    	<script src="js/vendor/holder.min.js"></script>
-    	<script>
-    		Holder.addTheme('thumb', {
-    			bg: '#55595c',
-    			fg: '#eceeef',
-    			text: 'Thumbnail'
-    		});
-    	</script>
+
+        <script type="text/javascript" src="js/main.js"></script>
 
 
     </body></html>
