@@ -36,6 +36,22 @@
 	border: solid 1px #17a2b8;
 }
 
+.enterBtn{
+	padding: 0px;
+	margin-top: 20px;
+	border-radius: 50%;
+	font-size: xx-large;
+	width: 50px;
+	height: 50px;
+	background-color: #17a2b8!important;
+	color: white!important;
+}
+@media (max-width: 992px) {
+	.enterBtn{
+		display: none;
+	}
+}
+
 article{
 	padding-top: 70px;
 }
