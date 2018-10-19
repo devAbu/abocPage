@@ -5,3 +5,7 @@
     background-attachment: fixed;
     min-height: 100vh;
 }
+
+article{
+	padding-top: 70px;
+}

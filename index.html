@@ -18,7 +18,7 @@
 
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" style="opacity: 0.7;">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
 		<a class="navbar-brand" href="#">ABOC</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
         </div>
     </section>
 
-    <article id="aboutUs">
+    <article id="aboutUs" class="container">
     	<h2>About us: </h2>
     	<div>We are a professional team, working around the world since 2014. Our motive is that every customer is 100% satisfied with our work without adding additional costs.
 
@@ -70,7 +70,7 @@ We offer --> Creating a professional website, mobile applications (Android and i
 --- We are available for work 24/7 every day</div>
     </article>
 
-    <article id="skills">
+    <article id="skills" class="container">
     	<h2>Our skills:</h2>
     	<div>
     		<ul style="list-style: none;"> 
@@ -120,41 +120,49 @@ We offer --> Creating a professional website, mobile applications (Android and i
     </article>
 
 
-    <article id="team">
-    	<h2>Our team</h2>
-    	<div>
-    		<img src="images/article1_bg.jpg" alt="abu" height="300" width="300">
-    		<p>abu</p>
-    		<a href="https://www.facebook.com">facebook</a>	
-    		<a href="https://www.instagram.com">instagram</a>
+    <article id="team" class="container">
+    	<div class="row">
+    		<h2>Our team</h2>	
     	</div>
+    	<div class="row">
+    		<div class="teamMember col-12 col-lg-3 col-md-6">
+	    		<img src="images/article1_bg.jpg" alt="abu" width="100%">
+	    		<p>abu</p>
+	    		<a href="https://www.facebook.com">facebook</a>	
+	    		<a href="https://www.instagram.com">instagram</a>
+	    	</div>
 
-    	<div>
-    		<img src="images/article1_bg.jpg" alt="omco" height="300" width="300">
-    		<p>omco</p>
-    		<a href="https://www.facebook.com">facebook</a>	
-    		<a href="https://www.instagram.com">instagram</a>
-    	</div>
+	    	<div class="teamMember col-12 col-lg-3 col-md-6">
+	    		<img src="images/article1_bg.jpg" alt="omco" width="100%">
+	    		<p>omco</p>
+	    		<a href="https://www.facebook.com">facebook</a>	
+	    		<a href="https://www.instagram.com">instagram</a>
+	    	</div>
 
-    	<div>
-    		<img src="images/article1_bg.jpg" alt="bake" height="300" width="300">
-    		<p>bake</p>
-    		<a href="https://www.facebook.com">facebook</a>	
-    		<a href="https://www.instagram.com">instagram</a>
-    	</div>
+	    	<div class="teamMember col-12 col-lg-3 col-md-6">
+	    		<img src="images/article1_bg.jpg" alt="bake" width="100%">
+	    		<p>bake</p>
+	    		<a href="https://www.facebook.com">facebook</a>	
+	    		<a href="https://www.instagram.com">instagram</a>
+	    	</div>
 
-    	<div>
-    		<img src="images/article1_bg.jpg" alt="combe" height="300" width="300">
-    		<p>combe</p>
-    		<a href="https://www.facebook.com">facebook</a>	
-    		<a href="https://www.instagram.com">instagram</a>
+	    	<div class="teamMember col-12 col-lg-3 col-md-6">
+	    		<img src="images/article1_bg.jpg" alt="combe" width="100%">
+	    		<p>combe</p>
+	    		<a href="https://www.facebook.com">facebook</a>	
+	    		<a href="https://www.instagram.com">instagram</a>
+	    	</div>	
     	</div>
+    	
     </article>
    
-    <article id="projects">
-    	<h2>Projects:</h2>
-
-    	<div class="card" style="width: 18;">
+    <article id="projects" class="container">
+		<div class="row">
+			<h2>Projects:</h2>
+		</div>
+		<div class="row">
+			
+    	<div class="card col-4">
     		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     			<div class="carousel-inner">
     				<div class="carousel-item active">
@@ -183,6 +191,7 @@ We offer --> Creating a professional website, mobile applications (Android and i
     			<a href="http://testbtt2.000webhostapp.com/" class="btn btn-primary" target="_blank">Go somewhere</a>
     		</div>
     	</div>
+		</div>
     	
     	
     	<!-- Slideshow btt-a -->
