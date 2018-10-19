@@ -1,9 +1,31 @@
-.jumbotron {
-    background-image: url('../images/article1_bg.jpg');
+#landing {
+	padding-top: 56px;
+    background-image: url('../images/landing.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+}
+
+#landing h1{
+	font-weight: bold;
+	color: #17a2b8;
+}
+
+#landing p{
+	font-weight: bold;
+	color: #17a2b8;
+	/*
+	color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	*/
+}
+
+#landing .btn{
+	background-color: white;
+	color: #17a2b8;
+	border: solid 1px #17a2b8;
 }
 
 article{
