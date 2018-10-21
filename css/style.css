@@ -72,3 +72,10 @@ article{
 	background: rgba(255,255,255,0.4);
 	/*color: #17a2b8;*/
 }
+footer{
+color: white;
+padding: 25px;
+}
+footer p{
+	margin: 5px;
+}
