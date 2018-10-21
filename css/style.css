@@ -75,7 +75,9 @@ article{
 footer{
 color: white;
 padding: 25px;
+text-align: center;
 }
 footer p{
 	margin: 5px;
 }
+
