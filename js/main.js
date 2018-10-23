@@ -32,3 +32,14 @@ $('a[href*="#"]')
       }
     }
   });
+  
+var delay=1000, setTimeoutConst, zrtva;
+$(".teamMember").on('mouseenter', function() {
+  zrtva = $(this);
+  setTimeoutConst = setTimeout(function() {
+    zrtva.children("p").slideDown();
+  }, delay);
+}).mouseleave(function(){
+    clearTimeout(setTimeoutConst);
+    zrtva.children("p").slideUp();
+});
