@@ -60,18 +60,18 @@ article{
 	padding-bottom: 70px;
 }
 
-.skillCardWrap{
+.skillCardWrap, .projectWrap{
 	padding: 15px;
 }
 
-.skillCardWrap .container{
+.skillCardWrap .container, .projectWrap .container{
 	padding: 20px;
 	background-color: rgba(238, 240, 243, 0.75);
 	min-height: 12em;
 	transition: 0.5s;
 }
 
-.skillCardWrap .container:hover{
+.skillCardWrap .container:hover, .projectWrap .container:hover{
 	
 	padding: 20px;
 	background-color: rgba(238, 240, 243, 0.9);
