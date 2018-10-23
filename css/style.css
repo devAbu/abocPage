@@ -81,12 +81,22 @@ article{
 #skills ul{
 	list-style: none;
 }
+.teamMember{
+	margin-bottom: 15px;
+}
 
+.teamMember img{
+	border-radius: 50%;
+}
 
-.teamMember p, .teamMember a{
+.teamMember h4, .teamMember p{
 	width: 100%;
 	text-align: center;
 }
+.memberSocialLinks{
+	text-align: center;
+}
+
 #aboutUs, #team{
 	background-color: white;
 	width: 100%;
