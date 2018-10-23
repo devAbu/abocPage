@@ -60,6 +60,29 @@ article{
 	padding-bottom: 70px;
 }
 
+.skillCardWrap{
+	padding: 15px;
+}
+
+.skillCardWrap .container{
+	padding: 20px;
+	background-color: rgba(238, 240, 243, 0.7);
+	min-height: 12em;
+	transition: 0.5s;
+}
+
+.skillCardWrap .container:hover{
+	
+	padding: 20px;
+	background-color: rgba(238, 240, 243, 0.9);
+	transform: scale(1.05);
+}
+
+#skills ul{
+	list-style: none;
+}
+
+
 .teamMember p, .teamMember a{
 	width: 100%;
 	text-align: center;
