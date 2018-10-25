@@ -61,18 +61,30 @@
     <article id="aboutUs">
     	<div class="container">
             <h2>About us: </h2>
-            <div>
+            <!--<div>
                 We are a professional team, working around the world since 2014. Our motive is that every customer is 100% satisfied with our work without adding additional costs.
 
                 Hard working, delivery project on time and acceptable price are our advantages.
 
-                We offer --> Creating a professional website, mobile applications (Android and iOS), data entry, software programs, and making/editing videos.
+                We offer -> Creating a professional website, mobile applications (Android and iOS), data entry, software programs, and making/editing videos.
 
                 --- 4+ years of experience
                 --- Best prices with 100% satisfaction
                 --- Work 6 days a week - if necessary 7 days
                 --- We are available for work 24/7 every day
-            </div>   
+            </div> -->  
+            <?php
+                require 'connection.php';
+
+                $sql = "SELECT * FROM aboutUs";
+                $result = $dbc->query($sql);
+                $count = $result->num_rows;
+                if ($count > 0) { 
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div>'.$row["description"].'</div>';
+                    }
+                }   
+            ?>
         </div>
     </article>
 
@@ -200,7 +212,27 @@
             <h2>Our team</h2>   
         </div>
         <div class="row">
-            <div class="teamMember col-6 col-lg-3 col-md-6">
+              <?php
+                require 'connection.php';
+
+                $sql = "SELECT * FROM team";
+                $result = $dbc->query($sql);
+                $count = $result->num_rows;
+                if ($count > 0) { 
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="teamMember col-6 col-lg-3 col-md-6">
+                <img src="images/abu.png" alt="abu" width="100%">
+                <h4>'.$row["name"].'</h4>
+                <div class="memberSocialLinks">
+                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
+                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <p class="memberIntro">'.$row["position"].'<br>'.$row["education"].'</p>
+            </div>';
+                    }
+                }   
+            ?>
+           <!-- <div class="teamMember col-6 col-lg-3 col-md-6">
                 <img src="images/abu.png" alt="abu" width="100%">
                 <h4>abu</h4>
                 <div class="memberSocialLinks">
@@ -258,9 +290,8 @@
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>  
+            </div>  -->
         </div>
-        
         </div>
     </article>
    
