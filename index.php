@@ -224,8 +224,8 @@
                 <img src="images/abu.png" alt="abu" width="100%">
                 <h4>'.$row["name"].'</h4>
                 <div class="memberSocialLinks">
-                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
-                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
+                    <a href=" '.$row["github"].' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
+                    <a href=" '.$row["linkedin"].'" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
                 </div>
                 <p class="memberIntro">'.$row["position"].'<br>'.$row["education"].'</p>
             </div>';
@@ -305,6 +305,30 @@
             <div class="container">
                 <div class="row">
 
+                <?php
+                require 'connection.php';
+                $sql = "SELECT * FROM projects";
+                $result = $dbc->query($sql);
+                $count = $result->num_rows;
+                if ($count > 0) { 
+                    while ($row = $result->fetch_assoc()) {
+                        echo'<div class="projectWrap col-12 col-md-6">
+                        <div class="container">
+                            <h3 class="projectHead">'.$row["name"].'</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="projectSubHead">'.$row["description"].'</h6>
+                                    <img src="images/landing.jpg" width="100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+                        }
+                    }   
+                ?>
+
+
+                    <!--  
                     <div class="projectWrap col-12 col-md-6">
                         <div class="container">
                             <h3 class="projectHead">Our homepage</h3>
@@ -339,7 +363,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                 </div>
             </div>
