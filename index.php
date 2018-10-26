@@ -6,6 +6,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../../../favicon.ico">
+    <!-- TODO: napravit logo i dodat ga -->
+    <!-- TODO: stranica mora bit responisve -->
 
 	<title>ABOC</title>
 
@@ -88,6 +90,7 @@
         </div>
     </article>
 
+    <!-- TODO: pokusat skontat ljepsi dizajn za content -->
     <article id="skills">
     	<div class="container">
             <h2>Our skills:</h2>
@@ -303,6 +306,7 @@
     </article>
 
 
+    <!-- TODO: dodat slike u bazi i povuc ih -->
     <article id="team">
         <div class="container">
         <div class="row">
@@ -394,7 +398,8 @@
    
     <article id="projects">
         <div class="container">
-            
+            <!-- TODO: dodat slike projekata-->
+            <!-- TODO: "admin" da moze dodat novi projekat -->
             <div class="row">
                 <h2>Projects:</h2>
             </div>
@@ -467,6 +472,8 @@
         </div>
     </article>
 
+
+    <!-- TODO: promijenit boje -->
     <footer>
     	<!--Contact list + mapa / popup + linkovi + copyright-->
     	<div class="container">
