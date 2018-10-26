@@ -97,7 +97,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <h6 class="skillSubHead">Frontend</h6>
+                               <h6 class="skillSubHead">Frontend</h6>
+                            <?php
+                            $sql = "SELECT * FROM skills where type = 'Front-end' ";
+                            $result = $dbc->query($sql);
+                            $count = $result->num_rows;
+                            if ($count > 0) {
+                                echo '<ul>';
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<li>' . $row["programs"] . '</li>';
+                                }
+                                echo '</ul>';
+                            }
+                            ?>
+                                <!-- <h6 class="skillSubHead">Frontend</h6>
                                 <ul>
                                     <li>HTML</li>
                                     <li>CSS</li>
@@ -107,11 +120,23 @@
                                     <li>JQUERY</li>
                                     <li>ANGULAR</li>
                                     <li>WORDPRESS</li>  
-                                </ul>
+                                </ul> -->
                             </div>
                             <div class="col-12 col-md-6">
                                 <h6 class="skillSubHead">Backend</h6>
-                                <ul>
+                                <?php
+                                $sql = "SELECT * FROM skills where type = 'Back-end' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                                <!-- <ul>
                                     <li>PHP</li>
                                     <li>NODE.JS</li>
                                     <li>JAVASCRIPT</li>     
@@ -120,7 +145,7 @@
                                     <li>MYSQL</li>
                                     <li>SQL</li>
                                     <li>MongoDB</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -131,24 +156,60 @@
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <h6 class="skillSubHead">Android</h6>
-                                <ul>
+                                <?php
+                                $sql = "SELECT * FROM skills where type = 'Android-app' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                                <!-- <ul>
                                     <li>Android Studio</li>
                                     <li>JAVA</li> 
-                                </ul>
+                                </ul> -->
                             </div>
                             <div class="col-12 col-md-4">
                                 <h6 class="skillSubHead">iOS</h6>
-                                <ul>
+                                <?php
+                                $sql = "SELECT * FROM skills where type = 'IOS' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                                <!-- <ul>
                                     <li>SWIFT</li>
-                                </ul>
+                                </ul> -->
                             </div>
                             <div class="col-12 col-md-4">
                                 <h6 class="skillSubHead">Hybrid Crossplatform Apps</h6>
-                                <ul>
+                                <?php
+                                $sql = "SELECT * FROM skills where type = 'Hybrid Crossplatform Apps' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                               <!--  <ul>
                                     <li>Adobe PhoneGap framework</li>
                                     <li>Apache Cordova framework</li>
                                     <li>Electron framework</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -159,14 +220,26 @@
                         <div class="row">
                             <div class="col-12">
                                 <h6 class="skillSubHead"></h6>
-                                <ul>
+                                <?php
+                                $sql = "SELECT * FROM skills where type = 'Software programming' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                                <!-- <ul>
                                     <li>C</li>
                                     <li>C++</li>
                                     <li>Qt Framework</li>    
                                     <li>C#</li>
                                     <li>PYTHON</li>
                                     <li>JAVA</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -177,10 +250,22 @@
                         <div class="row">
                             <div class="col-12">
                                 <h6 class="skillSubHead"></h6>
-                                <ul>
+                                <?php
+                                $sql = "SELECT * FROM skills where type = 'Video making and editing' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                                <!-- <ul>
                                     <li>ADOBE AFTER EFFECT</li>
                                     <li>ADOBE PREMIERE PRO</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -191,12 +276,24 @@
                         <div class="row">
                             <div class="col-12">
                                 <h6 class="skillSubHead"></h6>
-                                <ul>
+                                 <?php
+                                $sql = "SELECT * FROM skills where type = 'Data entry' ";
+                                $result = $dbc->query($sql);
+                                $count = $result->num_rows;
+                                if ($count > 0) {
+                                    echo '<ul>';
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<li>' . $row["programs"] . '</li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                                <!-- <ul>
                                     <li>EXCEL</li>
                                     <li>MYSQL</li>
                                     <li>SQL</li>
                                     <li>MongoDB</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -227,7 +324,7 @@
                     <a href=" ' . $row["github"] . ' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
                     <a href=" ' . $row["linkedin"] . '" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
                 </div>
-                <p class="memberIntro">' . $row["position"] . '<br>' . $row["education"] . '</p>
+                <p class="memberIntro">' . $row["position"] . '<br><a href="' . $row["educationLink"] . '"> ' . $row["education"] . '</a></p>
             </div>';
                     }
                 }
