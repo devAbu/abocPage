@@ -74,16 +74,16 @@
                 --- We are available for work 24/7 every day
             </div> -->  
             <?php
-                require 'connection.php';
+            require 'connection.php';
 
-                $sql = "SELECT * FROM aboutUs";
-                $result = $dbc->query($sql);
-                $count = $result->num_rows;
-                if ($count > 0) { 
-                    while ($row = $result->fetch_assoc()) {
-                        echo '<div>'.$row["description"].'</div>';
-                    }
-                }   
+            $sql = "SELECT * FROM aboutUs";
+            $result = $dbc->query($sql);
+            $count = $result->num_rows;
+            if ($count > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div>' . $row["description"] . '</div>';
+                }
+            }
             ?>
         </div>
     </article>
@@ -213,25 +213,25 @@
         </div>
         <div class="row">
               <?php
-                require 'connection.php';
+                //require 'connection.php';
 
                 $sql = "SELECT * FROM team";
                 $result = $dbc->query($sql);
                 $count = $result->num_rows;
-                if ($count > 0) { 
+                if ($count > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo '<div class="teamMember col-6 col-lg-3 col-md-6">
                 <img src="images/abu.png" alt="abu" width="100%">
-                <h4>'.$row["name"].'</h4>
+                <h4>' . $row["name"] . '</h4>
                 <div class="memberSocialLinks">
-                    <a href=" '.$row["github"].' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
-                    <a href=" '.$row["linkedin"].'" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
+                    <a href=" ' . $row["github"] . ' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
+                    <a href=" ' . $row["linkedin"] . '" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
                 </div>
-                <p class="memberIntro">'.$row["position"].'<br>'.$row["education"].'</p>
+                <p class="memberIntro">' . $row["position"] . '<br>' . $row["education"] . '</p>
             </div>';
                     }
-                }   
-            ?>
+                }
+                ?>
            <!-- <div class="teamMember col-6 col-lg-3 col-md-6">
                 <img src="images/abu.png" alt="abu" width="100%">
                 <h4>abu</h4>
@@ -306,25 +306,25 @@
                 <div class="row">
 
                 <?php
-                require 'connection.php';
+                //require 'connection.php';
                 $sql = "SELECT * FROM projects";
                 $result = $dbc->query($sql);
                 $count = $result->num_rows;
-                if ($count > 0) { 
+                if ($count > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo'<div class="projectWrap col-12 col-md-6">
+                        echo '<div class="projectWrap col-12 col-md-6">
                         <div class="container">
-                            <h3 class="projectHead">'.$row["name"].'</h3>
+                            <h3 class="projectHead">' . $row["name"] . '</h3>
                             <div class="row">
                                 <div class="col-12">
-                                    <h6 class="projectSubHead">'.$row["description"].'</h6>
+                                    <h6 class="projectSubHead">' . $row["description"] . '</h6>
                                     <img src="images/landing.jpg" width="100%">
                                 </div>
                             </div>
                         </div>
                     </div>';
-                        }
-                    }   
+                    }
+                }
                 ?>
 
 
@@ -378,15 +378,45 @@
     				<h3 >Building your dreams in software...</h3>
     			</div>
     			<div class="col">
-
-    				<h2>Contact</h2>
-    				<h6><i class="fa fa-envelope mr-2"></i>e-mail </h6>
-                    <a href="mailto:omar1537@gmail.com"> omar1537@gmail.com</a>
-    				
-    				<h6><i class="fa fa-map-marker mr-2"></i>Address </h6>
-    				<span id="footerAddress">
-    					<a href="#" id="map" data-toggle="modal" data-target="#mapModal" style="text-decoration:none;">Grada Bakua 11, <br>71000 Sarajevo, <br>Bosna i Hercegovina</a>
-    				</span>
+    				<h2 class="mb-5 text-uppercase">Contact info</h2>
+                    
+                    <ul class="list-group list-group-flush text-warning" style=" border:none; background-color: black">
+                        <li class="list-group-item  mt-4" style="background-color: black">
+                        <div class="row">
+                            <span class="col-3">
+                                <i class="fa fa-map-marker mr-2"></i>Address:
+                            </span>
+                            <span id="footerAddress" class="col-8 offset-1">
+                                <a href="#" id="map" data-toggle="modal" data-target="#mapModal" style="text-decoration:none;" class="text-white">Grada Bakua 11, Sarajevo, B&H</a>
+                            </span>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="background-color: black">
+                            <div class="row">
+                                <span class="col-3">
+                                    <i class="fa fa-envelope mr-2"></i>E-mail:
+                                </span>
+                                <span  id="footerEmail" class="col-8 ml-3">
+                                    <a href="mailto:omar1537@gmail.com" style="text-decoration:none;" class="text-white">
+                                        omar1537@gmail.com</a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="background-color: black">
+                        <div class="row">
+                                <span class="col-4 mt-2">
+                                    <i class="fa fa-share-alt mr-2"></i>Social media: 
+                                </span>
+                                <span class="col-8">
+                                    <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
+                                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="list-group-item" style="background-color: black"></li>
+                    </ul>
 
     				<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     					<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -404,13 +434,7 @@
     					</div>
     				</div>
     					
-    				<div class="socialLinks"> 
-    					<h6><i class="fa fa-share-alt"></i> Social media</h6>
-                        <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
-                        <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
-                        <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
-                    </div>
+    				
 
     			</div>
     		</div>			
