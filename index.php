@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" href="../../../../favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
     <!-- TODO: napravit logo i dodat ga -->
     <!-- TODO: stranica mora bit responisve -->
 
-	<title>ABOC</title>
+    <title>ABOC</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<!-- Custom styles for this template -->
-	<link href="css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-		<a class="navbar-brand" href="#landing">ABOC</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+        <a class="navbar-brand" href="#landing">ABOC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#aboutUs">About us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#skills">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#team">Team</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#projects">Projects</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutUs">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-	<section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
+    <section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
         <div class="container text-center hidden">
             <img class="textIntro" src="images/textIntro1.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
             <div class="socialLinks">    
@@ -61,15 +61,12 @@
     </section>
 
     <article id="aboutUs">
-    	<div class="container">
+        <div class="container">
             <h2>About us: </h2>
             <!--<div>
                 We are a professional team, working around the world since 2014. Our motive is that every customer is 100% satisfied with our work without adding additional costs.
-
                 Hard working, delivery project on time and acceptable price are our advantages.
-
                 We offer -> Creating a professional website, mobile applications (Android and iOS), data entry, software programs, and making/editing videos.
-
                 --- 4+ years of experience
                 --- Best prices with 100% satisfaction
                 --- Work 6 days a week - if necessary 7 days
@@ -77,7 +74,6 @@
             </div> -->  
             <?php
             require 'connection.php';
-
             $sql = "SELECT * FROM aboutUs";
             $result = $dbc->query($sql);
             $count = $result->num_rows;
@@ -92,7 +88,7 @@
 
     <!-- TODO: pokusat skontat ljepsi dizajn za content -->
     <article id="skills">
-    	<div class="container">
+        <div class="container">
             <h2>Our skills:</h2>
             <div class="row">
                 <div class="col-12 skillCardWrap skillWeb">
@@ -315,7 +311,6 @@
         <div class="row">
               <?php
                 //require 'connection.php';
-
                 $sql = "SELECT * FROM team";
                 $result = $dbc->query($sql);
                 $count = $result->num_rows;
@@ -328,7 +323,7 @@
                     <a href=" ' . $row["github"] . ' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
                     <a href=" ' . $row["linkedin"] . '" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
                 </div>
-                <p class="memberIntro">' . $row["position"] . '<br><a href="' . $row["educationLink"] . '"> ' . $row["education"] . '</a></p>
+                <p class="memberIntro">' . $row["position"] . '<br><a href=" ' . $row["educationLink"] . ' " target="_blank"> ' . $row["education"] . '</a></p>
             </div>';
                     }
                 }
@@ -347,7 +342,6 @@
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-
             <div class="teamMember col-6 col-lg-3 col-md-6">
                 <img src="images/oma.jpg" alt="omco" width="100%">
                 <h4>omco</h4>
@@ -362,7 +356,6 @@
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-
             <div class="teamMember col-6 col-lg-3 col-md-6">
                 <img src="images/bake.jpg" alt="bake" width="100%">
                 <h4>bake</h4>
@@ -377,7 +370,6 @@
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-
             <div class="teamMember col-6 col-lg-3 col-md-6">
                 <img src="images/combe.jpg" alt="combe" width="100%">
                 <h4>combe</h4>
@@ -442,7 +434,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="projectWrap col-12 col-md-6">
                         <div class="container">
                             <h3 class="projectHead">Klix News portal</h3>
@@ -454,7 +445,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="projectWrap col-12 col-md-6">
                         <div class="container">
                             <h3 class="projectHead">IUS webpage</h3>
@@ -475,14 +465,14 @@
 
     <!-- TODO: promijenit boje -->
     <footer>
-    	<!--Contact list + mapa / popup + linkovi + copyright-->
-    	<div class="container">
-    		<div class="row">
-    			<div class="col">
-    				<h3 >Building your dreams in software...</h3>
-    			</div>
-    			<div class="col">
-    				<h2 class="mb-5 text-uppercase">Contact info</h2>
+        <!--Contact list + mapa / popup + linkovi + copyright-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 >Building your dreams in software...</h3>
+                </div>
+                <div class="col">
+                    <h2 class="mb-5 text-uppercase">Contact info</h2>
                     
                     <ul class="list-group list-group-flush text-warning" style=" border:none; background-color: black">
                         <li class="list-group-item  mt-4" style="background-color: black">
@@ -522,27 +512,27 @@
                         <li class="list-group-item" style="background-color: black"></li>
                     </ul>
 
-    				<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    					<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    						<div class="modal-content">
-    							<div class="modal-header">
-    								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    									<span aria-hidden="true">&times;</span>
-    								</button>
-    							</div>
-    							<div class="modal-body">
-    								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.2453302725744!2d18.349382815303517!3d43.830010879115655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c990fdf0ccc5%3A0xdab20818f84ffaf7!2sGrada+Bakua%2C+Sarajevo+71000!5e0!3m2!1sen!2sba!4v1520858418062"
-    									width="750" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    					
-    				
+                    <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.2453302725744!2d18.349382815303517!3d43.830010879115655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c990fdf0ccc5%3A0xdab20818f84ffaf7!2sGrada+Bakua%2C+Sarajevo+71000!5e0!3m2!1sen!2sba!4v1520858418062"
+                                        width="750" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    
 
-    			</div>
-    		</div>			
-    	</div>
+                </div>
+            </div>          
+        </div>
     </footer>
     <script src="js/jQuery.js"></script>
     <script src="js/bootstrap.min.js"></script>
