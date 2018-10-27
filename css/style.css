@@ -52,7 +52,7 @@ body {
 }
 
 @media (max-width: 992px) {
-    .enterBtn {
+    .enterBtn, .text {
         display: none;
     }
 }

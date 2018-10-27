@@ -17,6 +17,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -471,26 +472,26 @@
                 <div class="col">
                     <h3 >Building your dreams in software...</h3>
                 </div>
-                <div class="col">
-                    <h2 class="mb-5 text-uppercase">Contact info</h2>
+                <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                    <h2 class=" text-uppercase">Contact info</h2>
                     
                     <ul class="list-group list-group-flush text-warning" style=" border:none; background-color: black">
-                        <li class="list-group-item  mt-4" style="background-color: black">
+                        <li class="list-group-item  " style="background-color: black">
                         <div class="row">
-                            <span class="col-3">
-                                <i class="fa fa-map-marker mr-2"></i>Address:
+                            <span class="col-2 col-lg-4">
+                                <i class="fa fa-map-marker mr-2"></i> <span class="text">Address</span>
                             </span>
-                            <span id="footerAddress" class="col-8 offset-1">
+                            <span id="footerAddress" class="col-9 ml-4  offset-md-1 offset-1 col-lg-7">
                                 <a href="#" id="map" data-toggle="modal" data-target="#mapModal" style="text-decoration:none;" class="text-white">Grada Bakua 11, Sarajevo, B&H</a>
                             </span>
                             </div>
                         </li>
                         <li class="list-group-item" style="background-color: black">
                             <div class="row">
-                                <span class="col-3">
-                                    <i class="fa fa-envelope mr-2"></i>E-mail:
+                                <span class="col-sm-2 col-2 col-lg-4">
+                                    <i class="fa fa-envelope mr-2"></i><span class="text">E-mail:</span>
                                 </span>
-                                <span  id="footerEmail" class="col-8 ml-3">
+                                <span  id="footerEmail" class="col-sm-9 col-9 ml-md-3 col-lg-7">
                                     <a href="mailto:omar1537@gmail.com" style="text-decoration:none;" class="text-white">
                                         omar1537@gmail.com</a>
                                 </span>
@@ -498,10 +499,10 @@
                         </li>
                         <li class="list-group-item" style="background-color: black">
                         <div class="row">
-                                <span class="col-4 mt-2">
-                                    <i class="fa fa-share-alt mr-2"></i>Social media: 
+                                <span class="col-2 mt-2 col-lg-5">
+                                    <i class="fa fa-share-alt mr-2"></i> <span class="text">Social media:</span> 
                                 </span>
-                                <span class="col-8">
+                                <span class="col-10 col-lg-7">
                                     <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
                                     <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
                                     <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
