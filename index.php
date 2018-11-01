@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body id='body'>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
         <a class="navbar-brand" href="#landing">ABOC</a>

@@ -1,5 +1,5 @@
 #landing,
-body {
+#body {
     background-image: url('../images/landing.jpg');
     background-size: cover;
     background-position: center;
@@ -23,7 +23,7 @@ body {
 .socialLinks {
     padding-top: 20px;
 }
- 
+
 #landing p {
     font-weight: bold;
     color: #17a2b8;
@@ -52,7 +52,8 @@ body {
 }
 
 @media (max-width: 992px) {
-    .enterBtn, .text {
+    .enterBtn,
+    .text {
         display: none;
     }
 }
@@ -130,4 +131,33 @@ footer {
 
 footer p {
     margin: 5px;
+}
+
+.pass {
+    position: relative;
+}
+
+.passIcon {
+    position: absolute;
+    top: 10%;
+    padding: 9px 8px;
+    left: 90%
+}
+
+.passIcon2 {
+    position: absolute;
+    top: 10%;
+    padding: 9px 8px;
+    left: 90%
+}
+
+.em {
+    position: relative;
+}
+
+.emIcon {
+    position: absolute;
+    top: 10%;
+    padding: 9px 8px;
+    left: 90%
 }
