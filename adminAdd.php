@@ -54,7 +54,7 @@
                        <input type="text" class="form-control" id="link" name="link" placeholder="Link...">
                    </div>
                    <div class="col-12 mt-2">
-                       <button class="btn btn-success"id='submit'>Submit</button>
+                       <button class="btn btn-success" id='submit'>Submit</button>
                    </div>
                </div>
            </div>
@@ -110,21 +110,19 @@
             url: "addData.php?name="+name+"&description="+description+"&link="+link,
 
             success: function (data){
-              if(data.indexOf('success') > -1){
-                $("#alertLog").addClass('alert-success');
-                $("#alertLog").html('succesfully added project.');
-                $("#alertLog").fadeIn(500).delay(2000).fadeOut(500);
+              if(data.indexOf('sent') > -1){
+                    toastr.success("Successfully added project!!!")
+                    $('#name').val("")
+                    $('#description').val("")
+                    $('#link').val("")
+                    $('.collapse').collapse("hide")
               } 
               else {
-                $("#alertLog").addClass('alert-danger');
-                $("#alertLog").html('project not added');
-                $("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
+                toastr.error("Project not added")
               }
             },
             error: function (data, err){
-              $("#alertLog").addClass('alert-danger');
-              $("#alertLog").html('Some problem occured. Please try again later.');
-              $("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
+              toastr.error("Some problem occured. Please try again later.")
             }
           })
         }

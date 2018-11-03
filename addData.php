@@ -7,9 +7,15 @@ $description = $_REQUEST['description'];
 $link = $_REQUEST['link'];
 
 
-    $sql = "INSERT INTO projects('name', 'description', 'link')";
-    $result = $dbc->query($sql);
+$sql = "INSERT INTO projects(`name`, `description`, `link`) values ('$name', '$description', '$link')";
+$response = @mysqli_query($dbc, $sql);
 
-  
-    ?>
+if ($response) {
+    echo ('sent');
+} else {
+    echo mysqli_error($dbc);
+}
+
+
+?>
 
