@@ -68,19 +68,51 @@
     $count = $result->num_rows;
     if ($count > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo '<div class="projectWrap col-12 col-md-6">
-                        <div class="container">
-                            <h3 class="projectHead">' . $row["name"] . '</h3>
-                            <div class="row">
-                                <div class="col-12">
-                                    <h6 class="projectSubHead">' . $row["description"] . '</h6>
-                                    <img src="images/landing.jpg" width="100%">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class=" btn btn-warning ">update</button>
-         <button class=" btn btn-danger ">delete</button>';
+            echo '
+                    <form method="post" action="delete.php">
+                    <input type="number" value="' . $row["ID"] . '" name="id" hidden/>
+                      <div class="projectWrap col-12 col-md-6">
+                          <div class="container">
+                              <h3 class="projectHead">' . $row["name"] . '</h3>
+                              <div class="row">
+                                  <div class="col-12">
+                                      <h6 class="projectSubHead">' . $row["description"] . '</h6>
+                                      <img src="images/landing.jpg" width="100%">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <button type="button" class=" btn btn-warning " data-toggle="collapse" data-target="#update'.$row["ID"].'">update</button>
+                    <button class=" btn btn-danger " type="submit" >delete</button>
+                    </form>
+
+                    <div class="collapse mt-3" id="update'.$row["ID"].'">
+                      <div class="card card-body">
+                         <div class="container">
+                             <div class="row">
+                             <input type="number" value="'.$row["ID"].'" id="idUpdate" hidden>
+                                 <div class="col-12">
+                                     <label for="name">Name: </label>
+                                     <input type="text" class="form-control" id="nameUpdate" name="name" value="'.$row["name"].'">
+                                 </div>
+                                 <div class="col-12">
+                                     <label for="description">Name: </label>
+                                     <input type="text" class="form-control" id="descriptionUpdate" name="description" value="'.$row["description"].'">
+                                 </div>
+                                 <div class="col-12">
+                                     <label for="link">Name: </label>
+                                     <input type="text" class="form-control" id="linkUpdate" name="link" value="'.$row["link"].'">
+                                 </div>
+                                 <div class="col-12 mt-2">
+                                     <button class="btn btn-success" id="edit">Edit</button>
+                                 </div>
+                             </div>
+                         </div>
+                      </div>
+                  </div>
+
+                    ';
+
         }
     }
     ?>
@@ -115,7 +147,47 @@
                     $('#name').val("")
                     $('#description').val("")
                     $('#link').val("")
-                    $('.collapse').collapse("hide")
+                    $('#form').collapse("hide")
+              } 
+              else {
+                toastr.error("Project not added")
+              }
+            },
+            error: function (data, err){
+              toastr.error("Some problem occured. Please try again later.")
+            }
+          })
+        }
+      }) 
+      </script>
+
+      <script>
+
+        $('#edit').click(function (){
+
+
+          var name = $('#nameUpdate').val()
+          var description = $('#descriptionUpdate').val()
+          var link = $('#linkUpdate').val()
+          var id = $('#idUpdate').val()
+
+
+          if(name == ""){
+            toastr.error("Enter name");
+          } else if(description==''){
+           toastr.error("Enter description")
+         } else if(link == ""){
+          toastr.error("Enter link")
+        } else {
+          $.ajax({
+            url: "update.php?name="+name+"&description="+description+"&link="+link+"&id="+id,
+
+            success: function (data){
+              if(data.indexOf('sent') > -1){
+                    toastr.success("Successfully added project!!!")
+                    $('#nameUpdate').val("")
+                    $('#descriptionUpdate').val("")
+                    $('#linkUpdate').val("")
               } 
               else {
                 toastr.error("Project not added")
