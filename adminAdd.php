@@ -46,11 +46,11 @@
                        <input type="text" class="form-control" id="name" name="name" placeholder="Name...">
                    </div>
                    <div class="col-12">
-                       <label for="description">Name: </label>
+                       <label for="description">Description: </label>
                        <input type="text" class="form-control" id="description" name="description" placeholder="Description...">
                    </div>
                    <div class="col-12">
-                       <label for="link">Name: </label>
+                       <label for="link">Link: </label>
                        <input type="text" class="form-control" id="link" name="link" placeholder="Link...">
                    </div>
                    <div class="col-12 mt-2">
@@ -67,8 +67,8 @@
     $result = $dbc->query($sql);
     $count = $result->num_rows;
     if ($count > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '
+      while ($row = $result->fetch_assoc()) {
+        echo '
                     <form method="post" action="delete.php">
                     <input type="number" value="' . $row["ID"] . '" name="id" hidden/>
                       <div class="projectWrap col-12 col-md-6">
@@ -82,29 +82,29 @@
                               </div>
                           </div>
                       </div>
-                      <button type="button" class=" btn btn-warning " data-toggle="collapse" data-target="#update'.$row["ID"].'">update</button>
+                      <button type="button" class=" btn btn-warning " data-toggle="collapse" data-target="#update' . $row["ID"] . '">update</button>
                     <button class=" btn btn-danger " type="submit" >delete</button>
                     </form>
 
-                    <div class="collapse mt-3" id="update'.$row["ID"].'">
+                    <div class="collapse mt-3" id="update' . $row["ID"] . '">
                       <div class="card card-body">
                          <div class="container">
                              <div class="row">
-                             <input type="number" value="'.$row["ID"].'" id="idUpdate" hidden>
+                             <input type="number" value="' . $row["ID"] . '" id="idUpdate" hidden>
                                  <div class="col-12">
                                      <label for="name">Name: </label>
-                                     <input type="text" class="form-control" id="nameUpdate" name="name" value="'.$row["name"].'">
+                                     <input type="text" class="form-control" id="nameUpdate' . $row["ID"] . '" name="name" value="' . $row["name"] . '">
                                  </div>
                                  <div class="col-12">
-                                     <label for="description">Name: </label>
-                                     <input type="text" class="form-control" id="descriptionUpdate" name="description" value="'.$row["description"].'">
+                                     <label for="description">Description: </label>
+                                     <input type="text" class="form-control" id="descriptionUpdate' . $row["ID"] . '" name="description" value="' . $row["description"] . '">
                                  </div>
                                  <div class="col-12">
-                                     <label for="link">Name: </label>
-                                     <input type="text" class="form-control" id="linkUpdate" name="link" value="'.$row["link"].'">
+                                     <label for="link">Link: </label>
+                                     <input type="text" class="form-control" id="linkUpdate' . $row["ID"] . '" name="link" value="' . $row["link"] . '">
                                  </div>
                                  <div class="col-12 mt-2">
-                                     <button class="btn btn-success" id="edit">Edit</button>
+                                     <button class="btn btn-success " id="edit' . $row["ID"] . '" onclick="edit(this.id)">Edit</button>
                                  </div>
                              </div>
                          </div>
@@ -113,7 +113,7 @@
 
                     ';
 
-        }
+      }
     }
     ?>
         
@@ -163,7 +163,50 @@
 
       <script>
 
-        $('#edit').click(function (){
+      function edit(idClick){
+        console.log(idClick)
+        var res = idClick.replace(/\D/g, "")
+          var name = $('#nameUpdate'+res).val()
+          var description = $('#descriptionUpdate'+res).val()
+          var link = $('#linkUpdate'+res).val()
+          var id = $('#idUpdate').val()
+
+         
+
+          console.log(res)
+
+          
+
+
+          if(name == ""){
+            toastr.error("Enter name");
+          } else if(description==''){
+           toastr.error("Enter description")
+         } else if(link == ""){
+          toastr.error("Enter link")
+        } else {
+          $.ajax({
+            url: "update.php?name="+name+"&description="+description+"&link="+link+"&id="+res,
+
+            success: function (data){
+              if(data.indexOf('sent') > -1){
+                    toastr.success("Successfully added project!!!")
+                    $('#nameUpdate').val("")
+                    $('#descriptionUpdate').val("")
+                    $('#linkUpdate').val("")
+              } 
+              else {
+                toastr.error("Project not added")
+              }
+            },
+            error: function (data, err){
+              toastr.error("Some problem occured. Please try again later.")
+            }
+          })
+        }
+      }
+
+       /*  $('#edit').click(function (){
 
 
           var name = $('#nameUpdate').val()
@@ -198,7 +241,7 @@
             }
           })
         }
-      }) 
+      })  */
       </script>
 
     
