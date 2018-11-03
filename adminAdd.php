@@ -107,7 +107,7 @@
           toastr.error("Enter link")
         } else {
           $.ajax({
-            url: "addData.php?name="+name+"&description="+description?"&link="+link,
+            url: "addData.php?name="+name+"&description="+description+"&link="+link,
 
             success: function (data){
               if(data.indexOf('success') > -1){
@@ -128,7 +128,7 @@
             }
           })
         }
-      } 
+      }) 
       </script>
 
     
