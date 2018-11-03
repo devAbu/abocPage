@@ -89,56 +89,47 @@
 
     
 
-<script>
-       
+      <script>
+
         $('#submit').click(function (){
 
 
-            var name = $('#name').val()
-            var description = $('#description').val()
-            var link = $('#link').val()
+          var name = $('#name').val()
+          var description = $('#description').val()
+          var link = $('#link').val()
 
 
-            if(name == ""){
-                toastr.error("Enter name");
-            } else if(description==''){
-               toastr.error("Enter description")
-            } else if(link == ""){
-                toastr.error("Enter link")
-            }/*  else {
-                $.ajax({
-                    url: "loginData.php?task=login&email="+email+"&pass="+pass,
-                    success: function (data){
-                        if(data.indexOf('success') > -1){
-                            $("#alertLog").addClass('alert-success');
-							$("#alertLog").html('Correct info.');
-							$("#alertLog").fadeIn(500).delay(2000).fadeOut(500);
+          if(name == ""){
+            toastr.error("Enter name");
+          } else if(description==''){
+           toastr.error("Enter description")
+         } else if(link == ""){
+          toastr.error("Enter link")
+        } else {
+          $.ajax({
+            url: "addData.php?name="+name+"&description="+description?"&link="+link,
 
-                            $('#email').val("");
-                            $('#pass').val("");
-                            var delay = 2000;
-                            setTimeout(function(){
-                               window.location.replace("adminAdd.php");  }, delay);
-                        } else if(data.indexOf('pass') > -1){
-                            $("#alertLog").addClass('alert-danger');
-							$("#alertLog").html('Password is incorrect');
-							$("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
-
-                        } else {
-                            $("#alertLog").addClass('alert-danger');
-							$("#alertLog").html('Email is incorrect');
-							$("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
-                        }
-                    },
-                    error: function (data, err){
-                        $("#alertLog").addClass('alert-danger');
-                        $("#alertLog").html('Some problem occured. Please try again later.');
-                        $("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
-                    }
-                })
-            } */
-        })
-    </script>
+            success: function (data){
+              if(data.indexOf('success') > -1){
+                $("#alertLog").addClass('alert-success');
+                $("#alertLog").html('succesfully added project.');
+                $("#alertLog").fadeIn(500).delay(2000).fadeOut(500);
+              } 
+              else {
+                $("#alertLog").addClass('alert-danger');
+                $("#alertLog").html('project not added');
+                $("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
+              }
+            },
+            error: function (data, err){
+              $("#alertLog").addClass('alert-danger');
+              $("#alertLog").html('Some problem occured. Please try again later.');
+              $("#alertLog").fadeIn(500).delay(1000).fadeOut(500);
+            }
+          })
+        }
+      } 
+      </script>
 
     
 
