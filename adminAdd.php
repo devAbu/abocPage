@@ -189,7 +189,7 @@
 
             success: function (data){
               if(data.indexOf('sent') > -1){
-                    toastr.success("Successfully added project!!!")
+                    toastr.success("Successfully updated project!!!")
                     $('#nameUpdate').val("")
                     $('#descriptionUpdate').val("")
                     $('#linkUpdate').val("")
