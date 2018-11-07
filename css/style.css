@@ -34,6 +34,7 @@
 	*/
 }
 
+
 #landing .btn {
     background-color: white;
     color: #17a2b8;
@@ -66,6 +67,9 @@ article {
 .skillCardWrap,
 .projectWrap {
     padding: 15px;
+}
+.AboutUsCardWrap {
+    padding-left: 25px;
 }
 
 .skillCardWrap .container,

@@ -72,7 +72,8 @@
                 --- Best prices with 100% satisfaction
                 --- Work 6 days a week - if necessary 7 days
                 --- We are available for work 24/7 every day
-            </div> -->  
+            </div> -->
+            <div class= "col-12 AboutUsCardWrap">
             <?php
             require 'connection.php';
             $sql = "SELECT * FROM aboutUs";
@@ -85,6 +86,7 @@
             }
             ?>
         </div>
+    </div>
     </article>
 
     <!-- TODO: pokusat skontat ljepsi dizajn za content -->
