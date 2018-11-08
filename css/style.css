@@ -79,6 +79,12 @@ article {
     min-height: 12em;
     transition: 0.5s;
 }
+#aboutUs{
+    background-color: white;
+    font-family: arial;
+    font-size: 13pt;
+}
+
 
 .skillCardWrap .container:hover,
 .projectWrap .container:hover {
@@ -114,7 +120,7 @@ article {
     text-align: center;
 }
 
-#aboutUs,
+
 #team {
     background-color: white;
     width: 100%;
