@@ -14,42 +14,43 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
 
-</head>
+    <script type="text/javascript">
+    $(window).on('scroll', function(){
+      if($(window).scrollTop()){
+        $('nav').addClass('black');
+      }
+      else {
+        $('nav').removeClass('black')
+      }
+    })
+</script>
+</head>x
 
 <body id='body'>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-        <a class="navbar-brand" href="#landing">ABOC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#aboutUs">About us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-            </ul>
-        </div>
+<div class="wrapper">
+  <nav>
+    <div class="logo">ABOC</div>
+    <ul>
+      <li><a href="#aboutUs">About Us</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#projects">Projects</a></li>
     </nav>
+
+
+
+
 
     <section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
         <div class="container text-center hidden">
             <img class="textIntro" src="images/textIntro1.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
-            <div class="socialLinks">    
+            <div class="socialLinks">
                 <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
                 <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
@@ -90,7 +91,7 @@
     </article>
 
     <!-- TODO: pokusat skontat ljepsi dizajn za content -->
-    <article id="skills">
+
         <div class="container">
             <h2>Our skills:</h2>
             <div class="row">
@@ -116,12 +117,12 @@
                                 <ul>
                                     <li>HTML</li>
                                     <li>CSS</li>
-                                    <li>SASS</li>       
+                                    <li>SASS</li>
                                     <li>BOOTSTRAP</li>
                                     <li>JAVASCRIPT</li>
                                     <li>JQUERY</li>
                                     <li>ANGULAR</li>
-                                    <li>WORDPRESS</li>  
+                                    <li>WORDPRESS</li>
                                 </ul> -->
                             </div>
                             <div class="col-12 col-md-6">
@@ -141,7 +142,7 @@
                                 <!-- <ul>
                                     <li>PHP</li>
                                     <li>NODE.JS</li>
-                                    <li>JAVASCRIPT</li>     
+                                    <li>JAVASCRIPT</li>
                                     <li>JQUERY</li>
                                     <li>ANGULAR</li>
                                     <li>MYSQL</li>
@@ -172,7 +173,7 @@
                                 ?>
                                 <!-- <ul>
                                     <li>Android Studio</li>
-                                    <li>JAVA</li> 
+                                    <li>JAVA</li>
                                 </ul> -->
                             </div>
                             <div class="col-12 col-md-4">
@@ -237,7 +238,7 @@
                                 <!-- <ul>
                                     <li>C</li>
                                     <li>C++</li>
-                                    <li>Qt Framework</li>    
+                                    <li>Qt Framework</li>
                                     <li>C#</li>
                                     <li>PYTHON</li>
                                     <li>JAVA</li>
@@ -309,7 +310,7 @@
     <article id="team">
         <div class="container">
         <div class="row">
-            <h2>Our team</h2>   
+            <h2>Our team</h2>
         </div>
         <div class="row">
               <?php
@@ -390,7 +391,7 @@
         </div>
         </div>
     </article>
-   
+
     <article id="projects">
         <div class="container">
             <!-- TODO: dodat slike projekata-->
@@ -425,7 +426,7 @@
                 ?>
 
 
-                    <!--  
+                    <!--
                     <div class="projectWrap col-12 col-md-6">
                         <div class="container">
                             <h3 class="projectHead">Our homepage</h3>
@@ -476,7 +477,7 @@
                 </div>
                 <div class="col-12 col-lg-6 mt-3 mt-lg-0">
                     <h2 class=" text-uppercase">Contact info</h2>
-                    
+
                     <ul class="list-group list-group-flush text-warning" style=" border:none; background-color: black">
                         <li class="list-group-item  " style="background-color: black">
                         <div class="row">
@@ -502,7 +503,7 @@
                         <li class="list-group-item" style="background-color: black">
                         <div class="row">
                                 <span class="col-2 mt-2 col-lg-5">
-                                    <i class="fa fa-share-alt mr-2"></i> <span class="text">Social media:</span> 
+                                    <i class="fa fa-share-alt mr-2"></i> <span class="text">Social media:</span>
                                 </span>
                                 <span class="col-10 col-lg-7">
                                     <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
@@ -530,11 +531,11 @@
                             </div>
                         </div>
                     </div>
-                        
-                    
+
+
 
                 </div>
-            </div>          
+            </div>
         </div>
     </footer>
     <script src="js/jQuery.js"></script>
