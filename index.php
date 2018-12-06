@@ -13,37 +13,67 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/nav.css" rel="stylesheet">
 
-    <script type="text/javascript">
-    $(window).on('scroll', function(){
-      if($(window).scrollTop()){
-        $('nav').addClass('black');
-      }
-      else {
-        $('nav').removeClass('black')
-      }
-    })
-</script>
-</head>x
+
+
+</head>
 
 <body id='body'>
-<div class="wrapper">
-  <nav>
-    <div class="logo">ABOC</div>
-    <ul>
-      <li><a href="#aboutUs">About Us</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </nav>
+  <div class="wrapper">
+              <header>
+
+                    <nav>
+
+                          <div class="menu-icon">
+                                <i class="fa fa-bars fa-2x"></i>
+                          </div>
+
+                          <div class="logo">
+                                LOGO
+                          </div>
+
+                          <div class="menu">
+                                <ul>
+                                      <li><a href="#aboutUs">ABOUT US</a></li>
+                                      <li><a href="#skills">  OUR SKILLS</a></li>
+                                      <li><a href="#team">OUR TEAM</a></li>
+                                      <li><a href="#projects">PROJECTS</a></li>
+                                </ul>
+                          </div>
+                    </nav>
+
+              </header>
+
+              <script type="text/javascript">
+
+                // Menu-toggle button
+
+                $(document).ready(function() {
+                      $(".menu-icon").on("click", function() {
+                            $("nav ul").toggleClass("showing");
+                      });
+                });
+
+                // Scrolling Effect
+
+                $(window).on("scroll", function() {
+                      if($(window).scrollTop()) {
+                            $('nav').addClass('black');
+                      }
+
+                      else {
+                            $('nav').removeClass('black');
+                      }
+                })
 
 
+                </script>
 
 
 
