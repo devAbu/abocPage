@@ -28,7 +28,7 @@
   <div class="wrapper">
               <header>
 
-                    <nav>
+                    <nav style="z-index:999">
 
                           <div class="menu-icon">
                                 <i class="fa fa-bars fa-2x"></i>
@@ -40,10 +40,10 @@
 
                           <div class="menu">
                                 <ul>
-                                      <li><a href="#aboutUs">ABOUT US</a></li>
-                                      <li><a href="#skills">  OUR SKILLS</a></li>
-                                      <li><a href="#team">OUR TEAM</a></li>
-                                      <li><a href="#projects">PROJECTS</a></li>
+                                      <li><a href="#aboutUs" id="aboutLink">about us</a></li>
+                                      <li><a href="#skills" id="skillsLink">our skills</a></li>
+                                      <li><a href="#team" id="teamLink">our team</a></li>
+                                      <li><a href="#projects" id="projectsLink">projects</a></li>
                                 </ul>
                           </div>
                     </nav>
@@ -121,7 +121,7 @@
     </article>
 
     <!-- TODO: pokusat skontat ljepsi dizajn za content -->
-
+<article id="skills">
         <div class="container">
             <h2>Our skills:</h2>
             <div class="row">
