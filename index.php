@@ -81,7 +81,7 @@
         <div class="container text-center hidden">
             <img class="textIntro" src="images/textIntro1.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
             <div class="socialLinks">
-                <a href="https://www.instagram.com/bosniant/"  target="_blank" class="btn btn-lg btn-primary" ><i class="fa fa-instagram"></i></a>
+                <a href="https://www.instagram.com/bosniant/" target="_blank"  class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
                 <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
                 <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
@@ -136,12 +136,26 @@
                             $result = $dbc->query($sql);
                             $count = $result->num_rows;
                             if ($count > 0) {
-                                echo '<ul>';
+                                echo '<ul class="kiso">';
                                 while ($row = $result->fetch_assoc()) {
-                                    echo '<li>' . $row["programs"] . '</li>';
+                                    echo '<li id="test'.$row["ID"].'" >' . $row["programs"] . '</li>';
                                 }
-                                echo '</ul>';
+                                echo '
+                                </ul>';
                             }
+
+                            echo '  <script>
+                                      var origin = $("#test1").html()
+                                      $("#test1").mouseover(function(){
+                                        $("#test1").html("HTML")
+                                        $("#test1").css("color", "red")
+                                      })
+
+                                      $("#test1").mouseout(function(){
+                                        $("#test1").html(origin)
+                                        $("#test1").css("color", "")
+                                      })
+                              </script>';
                             ?>
                                 <!-- <h6 class="skillSubHead">Frontend</h6>
                                 <ul>
@@ -155,6 +169,8 @@
                                     <li>WORDPRESS</li>
                                 </ul> -->
                             </div>
+
+
                             <div class="col-12 col-md-6">
                                 <h6 class="skillSubHead">Backend</h6>
                                 <?php
@@ -162,7 +178,7 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="kiso">';
                                     while ($row = $result->fetch_assoc()) {
                                         echo '<li>' . $row["programs"] . '</li>';
                                     }
@@ -188,14 +204,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <h6 class="skillSubHead">Android</h6>
+                                <h6 class="skillSubHead1">Android</h6>
                                 <?php
                                 $sql = "SELECT * FROM skills where type = 'Android-app' ";
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
+
                                         echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '</ul>';
@@ -207,15 +224,20 @@
                                 </ul> -->
                             </div>
                             <div class="col-12 col-md-4">
-                                <h6 class="skillSubHead">iOS</h6>
+                                <h6 class="skillSubHead1">iOS</h6>
                                 <?php
                                 $sql = "SELECT * FROM skills where type = 'IOS' ";
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
-                                        echo '<li>' . $row["programs"] . '</li>';
+                                      if($row["ID"] == 19){
+                                        echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40 style="margin-left:-25px;"> </li>';
+                                      }/*else{
+                                        echo '<li><img src="' . $row["programs"] . '" alt="ios"> </li>';
+                                      }*/
+                                        //echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '</ul>';
                                 }
@@ -225,13 +247,13 @@
                                 </ul> -->
                             </div>
                             <div class="col-12 col-md-4">
-                                <h6 class="skillSubHead">Hybrid Crossplatform Apps</h6>
+                                <h6 class="skillSubHead2">Hybrid Crossplatform Apps</h6>
                                 <?php
                                 $sql = "SELECT * FROM skills where type = 'Hybrid Crossplatform Apps' ";
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="muhamed1">';
                                     while ($row = $result->fetch_assoc()) {
                                         echo '<li>' . $row["programs"] . '</li>';
                                     }
@@ -258,7 +280,7 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="kiseli">';
                                     while ($row = $result->fetch_assoc()) {
                                         echo '<li>' . $row["programs"] . '</li>';
                                     }
@@ -288,9 +310,11 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="kiseli1">';
                                     while ($row = $result->fetch_assoc()) {
-                                        echo '<li>' . $row["programs"] . '</li>';
+
+                                          echo '<li>' . $row["programs"] . '</li>';
+
                                     }
                                     echo '</ul>';
                                 }
@@ -314,7 +338,7 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul>';
+                                    echo '<ul class="kiseli">';
                                     while ($row = $result->fetch_assoc()) {
                                         echo '<li>' . $row["programs"] . '</li>';
                                     }

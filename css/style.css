@@ -243,8 +243,43 @@ article {
     transform: scale(1.05);
 }
 
-#skills ul {
+#skills ul.kiso {
     list-style: none;
+    padding-left: 230px;
+}
+#skills ul.muhamed {
+    list-style: none;
+    padding-left: 150px;
+}
+#skills ul.muhamed1 {
+    list-style: none;
+    padding-left: 50px;
+}
+#skills ul.kiseli {
+    list-style: none;
+    padding-left: 130px;
+}
+#skills ul.kiseli1 {
+    list-style: none;
+    padding-left: 65px;
+}
+.skillSubHead {
+  padding-left: 210px;
+  font-family: calibri;
+  font-size: 16pt;
+  font-weight: bold;
+}
+.skillSubHead1 {
+  padding-left: 130px;
+  font-family: calibri;
+  font-size: 16pt;
+  font-weight: bold;
+}
+.skillSubHead2 {
+  padding-left: 40px;
+  font-family: calibri;
+  font-size: 16pt;
+  font-weight: bold;
 }
 
 .teamMember {
