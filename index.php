@@ -138,24 +138,24 @@
                             if ($count > 0) {
                                 echo '<ul class="kiso">';
                                 while ($row = $result->fetch_assoc()) {
-                                    echo '<li id="test'.$row["ID"].'" >' . $row["programs"] . '</li>';
+
+
+                                      if($row["ID"] == 4){
+                                        echo '<li>  <span class="tooltiptext">Tooltip text</span><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 6){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                        else echo '<li id="test'.$row["ID"].'" >' . $row["programs"] . '</li>';
+
+
+
                                 }
-                                echo '
-                                </ul>';
+                                echo
+                                '</ul>';
                             }
 
-                            echo '  <script>
-                                      var origin = $("#test1").html()
-                                      $("#test1").mouseover(function(){
-                                        $("#test1").html("HTML")
-                                        $("#test1").css("color", "red")
-                                      })
 
-                                      $("#test1").mouseout(function(){
-                                        $("#test1").html(origin)
-                                        $("#test1").css("color", "")
-                                      })
-                              </script>';
                             ?>
                                 <!-- <h6 class="skillSubHead">Frontend</h6>
                                 <ul>
@@ -180,8 +180,23 @@
                                 if ($count > 0) {
                                     echo '<ul class="kiso">';
                                     while ($row = $result->fetch_assoc()) {
-                                        echo '<li>' . $row["programs"] . '</li>';
+
+                                        if($row["ID"] == 14){
+                                          echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40 style="margin-left:3px;"> </li>';
+                                        }
+                                        elseif($row["ID"] == 16){
+                                          echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        }
+                                        elseif($row["ID"] == 12){
+                                          echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        }
+                                        elseif($row["ID"] == 15){
+                                          echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                        }
+                                        else echo '<li>' . $row["programs"] . '</li>';
+
                                     }
+
                                     echo '</ul>';
                                 }
                                 ?>
@@ -255,7 +270,16 @@
                                 if ($count > 0) {
                                     echo '<ul class="muhamed1">';
                                     while ($row = $result->fetch_assoc()) {
-                                        echo '<li>' . $row["programs"] . '</li>';
+                                      if($row["ID"] == 33){
+                                        echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40  style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 32){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 34){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                        else echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '</ul>';
                                 }
@@ -282,7 +306,19 @@
                                 if ($count > 0) {
                                     echo '<ul class="kiseli">';
                                     while ($row = $result->fetch_assoc()) {
-                                        echo '<li>' . $row["programs"] . '</li>';
+                                      if($row["ID"] == 20){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 21){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 22){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 31){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                        else echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '</ul>';
                                 }
@@ -312,8 +348,14 @@
                                 if ($count > 0) {
                                     echo '<ul class="kiseli1">';
                                     while ($row = $result->fetch_assoc()) {
+                                      if($row["ID"] == 29){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
+                                      elseif($row["ID"] == 30){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                      }
 
-                                          echo '<li>' . $row["programs"] . '</li>';
+                                        else echo '<li>' . $row["programs"] . '</li>';
 
                                     }
                                     echo '</ul>';
@@ -340,7 +382,19 @@
                                 if ($count > 0) {
                                     echo '<ul class="kiseli">';
                                     while ($row = $result->fetch_assoc()) {
-                                        echo '<li>' . $row["programs"] . '</li>';
+                                      if($row["ID"] == 25){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                      }
+                                      elseif($row["ID"] == 27){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                      }
+                                      elseif($row["ID"] == 26){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                      }
+                                      elseif($row["ID"] == 28){
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);" > </li>';
+                                      }
+                                      else echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '</ul>';
                                 }
