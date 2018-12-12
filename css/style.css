@@ -8,12 +8,14 @@
     font-family: "Fira Sans", serif;
 }
 
+
 body {
       font-family: "Fira Sans", serif;
       font-weight: lighter;
 }
 
 .logo {
+    background-color: #92a8d1;
       line-height: 60px;
       position: fixed;
       float: left;

@@ -34,8 +34,8 @@
                                 <i class="fa fa-bars fa-2x"></i>
                           </div>
 
-                          <div class="logo">
-                                LOGO
+                          <div class="logo" >
+                                <img src="images/co.png"  style="width:200px;height:150px; background-color: black !important">
                           </div>
 
                           <div class="menu">
