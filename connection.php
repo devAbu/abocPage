@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'mysql');//mysql valjda za mac :P 
+define('DB_PASSWORD', '');//mysql valjda za mac :P
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'abocAbout');
 

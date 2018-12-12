@@ -1,10 +1,158 @@
 #landing,
 #body {
-    background-image: url('../images/landing.jpg');
+    background-image: url('../images/slider.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    font-family: "Fira Sans", serif;
+}
+
+
+body {
+      font-family: "Fira Sans", serif;
+      font-weight: lighter;
+}
+
+.logo {
+    background-color: #92a8d1;
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      border: 1px solid white;
+    padding: 10px;
+    border-radius: 40px 10px;
+}
+/*
+#aboutLink:before{
+	content:'';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 42px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 2s ease;
+}
+
+#aboutLink:hover::before{
+width: 100%;
+}
+*/
+
+
+#aboutLink:hover{
+  text-decoration: none;
+  transition: all 2s ease;
+  background-color: grey;
+  color: white;
+}
+
+#skillsLink:hover{
+  text-decoration: none;
+  transition: all 2s ease;
+  background-color: grey;
+  color: white;
+}
+#teamLink:hover{
+  text-decoration: none;
+  transition: all 2s ease;
+  background-color: grey;
+  color: white;
+}
+#projectsLink:hover{
+  text-decoration: none;
+  transition: all 2s ease;
+  background-color: grey;
+  color: white;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
 }
 
 #landing {
@@ -80,11 +228,20 @@ article {
     transition: 0.5s;
 }
 #aboutUs{
+   background-image: url('../images/slider1.jpg');
+   margin-left: 13%;
+   margin-right: 13%;
     background-color: white;
-    font-family: arial;
-    font-size: 13pt;
+    font-family: calibri;
+    font-size: 16pt;
+    padding-left: 450px;
 }
+.ledeno{
+  font-family: Times New Roman;
+  font-size: 30pt;
 
+
+}
 
 .skillCardWrap .container:hover,
 .projectWrap .container:hover {
@@ -92,9 +249,96 @@ article {
     background-color: rgba(238, 240, 243, 0.9);
     transform: scale(1.05);
 }
+.skillHead{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 45px;
 
-#skills ul {
+}
+.skillHead1{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 455px;
+
+}
+
+.skillHead2{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 355px;
+
+}
+.skillHead3{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 100px;
+
+}
+.skillHead4{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 110px;
+
+}
+
+#skills ul.kiso {
     list-style: none;
+}
+#skills ul.muhamed {
+    list-style: none;
+    padding-left: 80px;
+}
+#skills ul.muhamed1 {
+    list-style: none;
+    padding-left: 100px;
+
+}
+#skills ul.kiseli {
+    list-style: none;
+    padding-right: 90px;
+}
+#skills ul.kiseli1 {
+    list-style: none;
+    padding-left: 75px;
+}
+#skills ul.kiseli2 {
+    list-style: none;
+    padding-left: 75px;
+  }
+.skillSubHead {
+  padding-left: 229px;
+  font-family: calibri;
+  font-size: 21pt;
+  font-weight: bold;
+}
+.skillSubHead7 {
+  padding-left: 242px;
+  font-family: calibri;
+  font-size: 21pt;
+  font-weight: bold;
+}
+.skillSubHead1 {
+  padding-left: 120px;
+  font-family: calibri;
+  font-size: 21pt;
+  font-weight: bold;
+}
+.skillSubHead2 {
+  padding-left: 30px;
+  font-family: calibri;
+  font-size: 19pt;
+  font-weight: bold;
+}
+.skillSubHead6 {
+  padding-left: 150px;
+  font-family: calibri;
+  font-size: 21pt;
+  font-weight: bold;
 }
 
 .teamMember {
@@ -122,7 +366,6 @@ article {
 
 
 #team {
-    background-color: white;
     width: 100%;
 }
 
@@ -170,4 +413,20 @@ footer p {
     top: 10%;
     padding: 9px 8px;
     left: 90%
+}
+.kiso li .home {
+    background: #a3d39c;
+}
+
+.kiso li .home:hover i:before {
+    content:"wdiwhdiwhd";
+}
+.combe{
+  margin-left: -45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-family: calibri;
 }
