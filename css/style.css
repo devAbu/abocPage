@@ -234,13 +234,54 @@ article {
     font-size: 16pt;
     padding-left: 450px;
 }
+.ledeno{
+  font-family: Times New Roman;
+  font-size: 30pt;
 
+
+}
 
 .skillCardWrap .container:hover,
 .projectWrap .container:hover {
     padding: 20px;
     background-color: rgba(238, 240, 243, 0.9);
     transform: scale(1.05);
+}
+.skillHead{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 45px;
+
+}
+.skillHead1{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 455px;
+
+}
+
+.skillHead2{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 355px;
+
+}
+.skillHead3{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 100px;
+
+}
+.skillHead4{
+  font-family: Palatino;
+  font-size: 21pt;
+  font-weight: bold;
+  padding-left: 110px;
+
 }
 
 #skills ul.kiso {
@@ -253,6 +294,7 @@ article {
 #skills ul.muhamed1 {
     list-style: none;
     padding-left: 100px;
+
 }
 #skills ul.kiseli {
     list-style: none;

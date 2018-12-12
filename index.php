@@ -123,10 +123,10 @@
     <!-- TODO: pokusat skontat ljepsi dizajn za content -->
 <article id="skills">
         <div class="container">
-            <h2>Our skills:</h2>
+            <h2 class="ledeno">Our skills:</h2>
             <div class="row">
                 <div class="col-12 skillCardWrap skillWeb">
-                    <h3 class="skillHead">Web Development</h3>
+                    <h3 class="skillHead1">Web Development</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -624,7 +624,7 @@
                     </div>
                 </div>
                 <div class="col-12 skillCardWrap skillMobile">
-                    <h3 class="skillHead">Mobile Application Development</h3>
+                    <h3 class="skillHead2">Mobile Application Development</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -1057,7 +1057,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 skillCardWrap skillVideo">
-                    <h3 class="skillHead">Video Editing</h3>
+                    <h3 class="skillHead3">Video Editing</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -1144,7 +1144,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 skillCardWrap skillData">
-                    <h3 class="skillHead">Data Entry</h3>
+                    <h3 class="skillHead4">Data Entry</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
