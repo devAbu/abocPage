@@ -136,23 +136,228 @@
                             $result = $dbc->query($sql);
                             $count = $result->num_rows;
                             if ($count > 0) {
-                                echo '<ul class="kiso">';
+                                echo '
+
+
+                                <ul class="kiso">
+                                  <div class="row">';
                                 while ($row = $result->fetch_assoc()) {
-
-
                                       if($row["ID"] == 4){
-                                        echo '<li>  <span class="tooltiptext">Tooltip text</span><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       elseif($row["ID"] == 6){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
-                                        else echo '<li id="test'.$row["ID"].'" >' . $row["programs"] . '</li>';
+                                        else echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
 
 
 
                                 }
+
+                                echo '  <script>
+                                    $("#test1").mouseover(function(){
+                                      $("#abu1").html("HTML")
+                                      $("#test1").css("opacity", 0.2)
+                                      $("#abu1").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                    })
+
+                                    $("#test1").mouseout(function(){
+                                      $("#abu1").html("")
+                                      $("#test1").css("opacity", 1)
+                                      $("#abu1").css("opacity", 0)
+                                    })
+
+                                    $("#abu1").mouseover(function(){
+                                      $("#abu1").html("HTML")
+                                      $("#test1").css("opacity", 0.2)
+                                      $("#abu1").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                    })
+
+                                    $("#abu1").mouseout(function(){
+                                      $("#abu1").html("")
+                                      $("#test1").css("opacity", 1)
+                                      $("#abu1").css("opacity", 0)
+                                    })
+
+
+
+
+                                    $("#test2").mouseover(function(){
+                                      $("#abu2").html("CSS")
+                                      $("#test2").css("opacity", 0.2)
+                                      $("#abu2").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                    })
+
+                                    $("#test2").mouseout(function(){
+                                      $("#abu2").html("")
+                                      $("#test2").css("opacity", 1)
+                                      $("#abu2").css("opacity", 0)
+                                    })
+
+                                    $("#abu2").mouseover(function(){
+                                      $("#abu2").html("CSS")
+                                      $("#test2").css("opacity", 0.2)
+                                      $("#abu2").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                    })
+
+                                    $("#abu2").mouseout(function(){
+                                      $("#abu2").html("")
+                                      $("#test2").css("opacity", 1)
+                                      $("#abu2").css("opacity", 0)
+                                    })
+
+
+                                    $("#test3").mouseover(function(){
+                                      $("#abu3").html("SASS")
+                                      $("#test3").css("opacity", 0.2)
+                                      $("#abu3").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                    })
+
+                                    $("#test3").mouseout(function(){
+                                      $("#abu3").html("")
+                                      $("#test3").css("opacity", 1)
+                                      $("#abu3").css("opacity", 0)
+                                    })
+
+                                    $("#abu3").mouseover(function(){
+                                      $("#abu3").html("SASS")
+                                      $("#test3").css("opacity", 0.2)
+                                      $("#abu3").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                    })
+
+                                    $("#abu3").mouseout(function(){
+                                      $("#abu3").html("")
+                                      $("#test3").css("opacity", 1)
+                                      $("#abu3").css("opacity", 0)
+                                    })
+
+                                    $("#test4").mouseover(function(){
+                                      $("#abu4").html("Bootstrap")
+                                      $("#test4").css("opacity", 0.2)
+                                      $("#abu4").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                    })
+
+                                    $("#test4").mouseout(function(){
+                                      $("#abu4").html("")
+                                      $("#test4").css("opacity", 1)
+                                      $("#abu4").css("opacity", 0)
+                                    })
+
+                                    $("#abu4").mouseover(function(){
+                                      $("#abu4").html("Bootstrap")
+                                      $("#test4").css("opacity", 0.2)
+                                      $("#abu4").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                    })
+
+                                    $("#abu4").mouseout(function(){
+                                      $("#abu4").html("")
+                                      $("#test4").css("opacity", 1)
+                                      $("#abu4").css("opacity", 0)
+                                    })
+
+
+
+                                    $("#test5").mouseover(function(){
+                                      $("#abu5").html("JavaScript")
+                                      $("#test5").css("opacity", 0.2)
+                                      $("#abu5").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                    })
+
+                                    $("#test5").mouseout(function(){
+                                      $("#abu5").html("")
+                                      $("#test5").css("opacity", 1)
+                                      $("#abu5").css("opacity", 0)
+                                    })
+
+                                    $("#abu5").mouseover(function(){
+                                      $("#abu5").html("JavaScript")
+                                      $("#test5").css("opacity", 0.2)
+                                      $("#abu5").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                    })
+
+                                    $("#abu5").mouseout(function(){
+                                      $("#abu5").html("")
+                                      $("#test5").css("opacity", 1)
+                                      $("#abu5").css("opacity", 0)
+                                    })
+
+                                    $("#test6").mouseover(function(){
+                                      $("#abu6").html("jQuery")
+                                      $("#test6").css("opacity", 0.2)
+                                      $("#abu6").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                    })
+
+                                    $("#test6").mouseout(function(){
+                                      $("#abu6").html("")
+                                      $("#test6").css("opacity", 1)
+                                      $("#abu6").css("opacity", 0)
+                                    })
+
+                                    $("#abu6").mouseover(function(){
+                                      $("#abu6").html("jQuery")
+                                      $("#test6").css("opacity", 0.2)
+                                      $("#abu6").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                    })
+
+                                    $("#abu6").mouseout(function(){
+                                      $("#abu6").html("")
+                                      $("#test6").css("opacity", 1)
+                                      $("#abu6").css("opacity", 0)
+                                    })
+
+
+                                    $("#test7").mouseover(function(){
+                                      $("#abu7").html("AngularJS")
+                                      $("#test7").css("opacity", 0.2)
+                                      $("#abu7").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                    })
+
+                                    $("#test7").mouseout(function(){
+                                      $("#abu7").html("")
+                                      $("#test7").css("opacity", 1)
+                                      $("#abu7").css("opacity", 0)
+                                    })
+
+                                    $("#abu7").mouseover(function(){
+                                      $("#abu7").html("AngularJS")
+                                      $("#test7").css("opacity", 0.2)
+                                      $("#abu7").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                    })
+
+                                    $("#abu7").mouseout(function(){
+                                      $("#abu7").html("")
+                                      $("#test7").css("opacity", 1)
+                                      $("#abu7").css("opacity", 0)
+                                    })
+
+                                    $("#test8").mouseover(function(){
+                                      $("#abu8").html("WordPress")
+                                      $("#test8").css("opacity", 0.2)
+                                      $("#abu8").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:8px")
+                                    })
+
+                                    $("#test8").mouseout(function(){
+                                      $("#abu8").html("")
+                                      $("#test8").css("opacity", 1)
+                                      $("#abu8").css("opacity", 0)
+                                    })
+
+                                    $("#abu8").mouseover(function(){
+                                      $("#abu8").html("WordPress")
+                                      $("#test8").css("opacity", 0.2)
+                                      $("#abu8").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:8px")
+                                    })
+
+                                    $("#abu8").mouseout(function(){
+                                      $("#abu8").html("")
+                                      $("#test8").css("opacity", 1)
+                                      $("#abu8").css("opacity", 0)
+                                    })
+
+                            </script>';
+
                                 echo
-                                '</ul>';
+                                '</div></ul>' ;
                             }
 
 
@@ -178,26 +383,230 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul class="kiso">';
+                                    echo '<ul class="kiso">
+                                    <div class="row">';
                                     while ($row = $result->fetch_assoc()) {
 
                                         if($row["ID"] == 14){
-                                          echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40 style="margin-left:3px;"> </li>';
+                                          echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                         }
                                         elseif($row["ID"] == 16){
-                                          echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                          echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                         }
                                         elseif($row["ID"] == 12){
-                                          echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                          echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                         }
                                         elseif($row["ID"] == 15){
-                                          echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                          echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                         }
-                                        else echo '<li>' . $row["programs"] . '</li>';
+
+                                        else echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
 
                                     }
+                                  echo  '<script>
 
-                                    echo '</ul>';
+                                  $("#test9").mouseover(function(){
+                                    $("#abu9").html("PHP")
+                                    $("#test9").css("opacity", 0.2)
+                                    $("#abu9").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:30px")
+                                  })
+
+                                  $("#test9").mouseout(function(){
+                                    $("#abu9").html("")
+                                    $("#test9").css("opacity", 1)
+                                    $("#abu9").css("opacity", 0)
+                                  })
+
+                                  $("#abu9").mouseover(function(){
+                                    $("#abu9").html("PHP")
+                                    $("#test9").css("opacity", 0.2)
+                                    $("#abu9").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:30px")
+                                  })
+
+                                  $("#abu9").mouseout(function(){
+                                    $("#abu9").html("")
+                                    $("#test9").css("opacity", 1)
+                                    $("#abu9").css("opacity", 0)
+                                  })
+
+
+                                  $("#test10").mouseover(function(){
+                                    $("#abu10").html("Node.js")
+                                    $("#test10").css("opacity", 0.2)
+                                    $("#abu10").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:30px")
+                                  })
+
+                                  $("#test10").mouseout(function(){
+                                    $("#abu10").html("")
+                                    $("#test10").css("opacity", 1)
+                                    $("#abu10").css("opacity", 0)
+                                  })
+
+                                  $("#abu10").mouseover(function(){
+                                    $("#abu10").html("Node.js")
+                                    $("#test10").css("opacity", 0.2)
+                                    $("#abu10").css("cssText", "opacity : 1 !important; font-size: 23px; padding-left:30px")
+                                  })
+
+                                  $("#abu10").mouseout(function(){
+                                    $("#abu10").html("")
+                                    $("#test10").css("opacity", 1)
+                                    $("#abu10").css("opacity", 0)
+                                  })
+
+
+                                  $("#test11").mouseover(function(){
+                                    $("#abu11").html("JavaScript")
+                                    $("#test11").css("opacity", 0.2)
+                                    $("#abu11").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                  })
+
+                                  $("#test11").mouseout(function(){
+                                    $("#abu11").html("")
+                                    $("#test11").css("opacity", 1)
+                                    $("#abu11").css("opacity", 0)
+                                  })
+
+                                  $("#abu11").mouseover(function(){
+                                    $("#abu11").html("JavaScript")
+                                    $("#test11").css("opacity", 0.2)
+                                    $("#abu11").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                  })
+
+                                  $("#abu11").mouseout(function(){
+                                    $("#abu11").html("")
+                                    $("#test11").css("opacity", 1)
+                                    $("#abu11").css("opacity", 0)
+                                  })
+
+                                  $("#test12").mouseover(function(){
+                                    $("#abu12").html("jQuery")
+                                    $("#test12").css("opacity", 0.2)
+                                    $("#abu12").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#test12").mouseout(function(){
+                                    $("#abu12").html("")
+                                    $("#test12").css("opacity", 1)
+                                    $("#abu12").css("opacity", 0)
+                                  })
+
+                                  $("#abu12").mouseover(function(){
+                                    $("#abu12").html("jQuery")
+                                    $("#test12").css("opacity", 0.2)
+                                    $("#abu12").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#abu12").mouseout(function(){
+                                    $("#abu12").html("")
+                                    $("#test12").css("opacity", 1)
+                                    $("#abu12").css("opacity", 0)
+                                  })
+
+                                  $("#test13").mouseover(function(){
+                                    $("#abu13").html("AngularJS")
+                                    $("#test13").css("opacity", 0.2)
+                                    $("#abu13").css("cssText", "opacity : 1 !important; font-size: 23px;")
+                                  })
+
+                                  $("#test13").mouseout(function(){
+                                    $("#abu13").html("")
+                                    $("#test13").css("opacity", 1)
+                                    $("#abu13").css("opacity", 0)
+                                  })
+
+                                  $("#abu13").mouseover(function(){
+                                    $("#abu13").html("AngularJS")
+                                    $("#test13").css("opacity", 0.2)
+                                    $("#abu13").css("cssText", "opacity : 1 !important; font-size: 23px")
+                                  })
+
+                                  $("#abu13").mouseout(function(){
+                                    $("#abu13").html("")
+                                    $("#test13").css("opacity", 1)
+                                    $("#abu13").css("opacity", 0)
+                                  })
+
+                                  $("#test14").mouseover(function(){
+                                    $("#abu14").html("MySQL")
+                                    $("#test14").css("opacity", 0.2)
+                                    $("#abu14").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#test14").mouseout(function(){
+                                    $("#abu14").html("")
+                                    $("#test14").css("opacity", 1)
+                                    $("#abu14").css("opacity", 0)
+                                  })
+
+                                  $("#abu14").mouseover(function(){
+                                    $("#abu14").html("MySQL")
+                                    $("#test14").css("opacity", 0.2)
+                                    $("#abu14").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#abu14").mouseout(function(){
+                                    $("#abu14").html("")
+                                    $("#test14").css("opacity", 1)
+                                    $("#abu14").css("opacity", 0)
+                                  })
+
+                                  $("#test15").mouseover(function(){
+                                    $("#abu15").html("SQL")
+                                    $("#test15").css("opacity", 0.2)
+                                    $("#abu15").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#test15").mouseout(function(){
+                                    $("#abu15").html("")
+                                    $("#test15").css("opacity", 1)
+                                    $("#abu15").css("opacity", 0)
+                                  })
+
+                                  $("#abu15").mouseover(function(){
+                                    $("#abu15").html("SQL")
+                                    $("#test15").css("opacity", 0.2)
+                                    $("#abu15").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#abu15").mouseout(function(){
+                                    $("#abu15").html("")
+                                    $("#test15").css("opacity", 1)
+                                    $("#abu15 ").css("opacity", 0)
+                                  })
+
+                                  $("#test16").mouseover(function(){
+                                    $("#abu16").html("MongoDB")
+                                    $("#test16").css("opacity", 0.2)
+                                    $("#abu16").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#test16").mouseout(function(){
+                                    $("#abu16").html("")
+                                    $("#test16").css("opacity", 1)
+                                    $("#abu16").css("opacity", 0)
+                                  })
+
+                                  $("#abu16").mouseover(function(){
+                                    $("#abu16").html("MongoDB")
+                                    $("#test16").css("opacity", 0.2)
+                                    $("#abu16").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:13px")
+                                  })
+
+                                  $("#abu16").mouseout(function(){
+                                    $("#abu16").html("")
+                                    $("#test16").css("opacity", 1)
+                                    $("#abu16").css("opacity", 0)
+                                  })
+
+
+
+
+
+
+                          </script>';
+
+                                    echo '</div></ul>';
                                 }
                                 ?>
                                 <!-- <ul>
@@ -228,8 +637,63 @@
                                     echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
 
-                                        echo '<li>' . $row["programs"] . '</li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                     }
+
+                                    echo '<script>
+
+                                    $("#test17").mouseover(function(){
+                                      $("#abu17").html("Android")
+                                      $("#test17").css("opacity", 0.2)
+                                      $("#abu17").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:110px")
+                                    })
+
+                                    $("#test17").mouseout(function(){
+                                      $("#abu17").html("")
+                                      $("#test17").css("opacity", 1)
+                                      $("#abu17").css("opacity", 0)
+                                    })
+
+                                    $("#abu17").mouseover(function(){
+                                      $("#abu17").html("Android")
+                                      $("#test17").css("opacity", 0.2)
+                                      $("#abu17").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:110px")
+                                    })
+
+                                    $("#abu17").mouseout(function(){
+                                      $("#abu17").html("")
+                                      $("#test17").css("opacity", 1)
+                                      $("#abu17").css("opacity", 0)
+                                    })
+
+
+                                    $("#test18").mouseover(function(){
+                                      $("#abu18").html("Java")
+                                      $("#test18").css("opacity", 0.2)
+                                      $("#abu18").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:110px")
+                                    })
+
+                                    $("#test18").mouseout(function(){
+                                      $("#abu18").html("")
+                                      $("#test18").css("opacity", 1)
+                                      $("#abu18").css("opacity", 0)
+                                    })
+
+                                    $("#abu18").mouseover(function(){
+                                      $("#abu18").html("Java")
+                                      $("#test18").css("opacity", 0.2)
+                                      $("#abu18").css("cssText", "opacity : 1 !important; font-size: 23px;padding-left:110px")
+                                    })
+
+                                    $("#abu18").mouseout(function(){
+                                      $("#abu18").html("")
+                                      $("#test18").css("opacity", 1)
+                                      $("#abu18").css("opacity", 0)
+                                    })
+
+
+
+                            </script>';
                                     echo '</ul>';
                                 }
                                 ?>
@@ -248,7 +712,7 @@
                                     echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 19){
-                                        echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40 style="margin-left:-25px;"> </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40 style="margin-left:-25px;height: 63px; width:63px;"> </li>';
                                       }/*else{
                                         echo '<li><img src="' . $row["programs"] . '" alt="ios"> </li>';
                                       }*/
@@ -271,13 +735,13 @@
                                     echo '<ul class="muhamed1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 33){
-                                        echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40  style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="ios" height=40 width=40  style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
                                       }
                                       elseif($row["ID"] == 32){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
                                       }
                                       elseif($row["ID"] == 34){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
                                       }
                                         else echo '<li>' . $row["programs"] . '</li>';
                                     }
@@ -304,23 +768,26 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul class="kiseli">';
+
+                                    echo '<ul class="kiseli">
+                                     <div class="row">';
                                     while ($row = $result->fetch_assoc()) {
+
                                       if($row["ID"] == 20){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<div class="col-4 offset-2"><li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li></div>';
                                       }
                                       elseif($row["ID"] == 21){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<div class="col-4 offset-2"><li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li></div>';
                                       }
                                       elseif($row["ID"] == 22){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<div class="col-4 offset-2"><li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li></div>';
                                       }
                                       elseif($row["ID"] == 31){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<div class="col-4 offset-2"><li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li></div>';
                                       }
-                                        else echo '<li>' . $row["programs"] . '</li>';
+                                        else echo '<div class="col-4 offset-2"><li>' . $row["programs"] . '</li></div>';
                                     }
-                                    echo '</ul>';
+                                    echo '</div></ul>';
                                 }
                                 ?>
                                 <!-- <ul>
@@ -349,10 +816,10 @@
                                     echo '<ul class="kiseli1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 29){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
                                       }
                                       elseif($row["ID"] == 30){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);"> </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
                                       }
 
                                         else echo '<li>' . $row["programs"] . '</li>';
@@ -380,19 +847,19 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                    echo '<ul class="kiseli">';
+                                    echo '<ul class="kiseli2">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 25){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="height: 63px; width:63px;"> </li>';
                                       }
                                       elseif($row["ID"] == 27){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="height: 63px; width:63px;"> </li>';
                                       }
                                       elseif($row["ID"] == 26){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 > </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="height: 63px; width:63px;"> </li>';
                                       }
                                       elseif($row["ID"] == 28){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);" > </li>';
+                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"" > </li>';
                                       }
                                       else echo '<li>' . $row["programs"] . '</li>';
                                     }
