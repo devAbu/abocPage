@@ -248,15 +248,15 @@ article {
 }
 #skills ul.muhamed {
     list-style: none;
-    padding-left: 150px;
+    padding-left: 80px;
 }
 #skills ul.muhamed1 {
     list-style: none;
-    padding-left: 150px;
+    padding-left: 100px;
 }
 #skills ul.kiseli {
     list-style: none;
-    padding-left: 0px;
+    padding-right: 90px;
 }
 #skills ul.kiseli1 {
     list-style: none;
@@ -267,21 +267,33 @@ article {
     padding-left: 138px;
   }
 .skillSubHead {
-  padding-left: 210px;
+  padding-left: 229px;
   font-family: calibri;
-  font-size: 16pt;
+  font-size: 21pt;
+  font-weight: bold;
+}
+.skillSubHead7 {
+  padding-left: 242px;
+  font-family: calibri;
+  font-size: 21pt;
   font-weight: bold;
 }
 .skillSubHead1 {
-  padding-left: 130px;
+  padding-left: 120px;
   font-family: calibri;
-  font-size: 16pt;
+  font-size: 21pt;
   font-weight: bold;
 }
 .skillSubHead2 {
-  padding-left: 40px;
+  padding-left: 30px;
   font-family: calibri;
-  font-size: 16pt;
+  font-size: 19pt;
+  font-weight: bold;
+}
+.skillSubHead6 {
+  padding-left: 150px;
+  font-family: calibri;
+  font-size: 21pt;
   font-weight: bold;
 }
 
