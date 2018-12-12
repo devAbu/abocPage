@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'connection.php';
 
 $id = $_REQUEST['id'];
