@@ -15,15 +15,14 @@ body {
 }
 
 .logo {
-    background-color: #92a8d1;
+
       line-height: 60px;
       position: fixed;
       float: left;
-      margin: 16px 46px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      letter-spacing: 2px;
+      margin: 16px -11px;
+      margin-top: -13px;
+
+
 }
 
 nav {
@@ -121,12 +120,11 @@ width: 100%;
       display: none;
 }
 
-@media(max-width: 786px) {
+@media(max-width: 1015px) {
 
       .logo {
             position: fixed;
             top: 0;
-            margin-top: 16px;
       }
 
       nav ul {

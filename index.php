@@ -35,7 +35,7 @@
                           </div>
 
                           <div class="logo" >
-                                <img src="images/co.png"  style="width:200px;height:150px; background-color: black !important">
+                                <img src="images/abocfinal.png"  style="width:300px;height:200px; background-color: none !important">
                           </div>
 
                           <div class="menu">
