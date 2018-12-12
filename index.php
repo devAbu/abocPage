@@ -774,7 +774,7 @@
                                     $("#test32").mouseover(function(){
                                       $("#abu32").html("Adobe PhoneGap")
                                       $("#test32").css("opacity", 0.2)
-                                      $("#abu32").css("cssText", "opacity : 1 !important; font-size:15px;padding-left:105px")
+                                      $("#abu32").css("cssText", "opacity : 1 !important; font-size:15px;text-align:center;padding-left:105px")
                                     })
 
                                     $("#test32").mouseout(function(){
@@ -786,7 +786,7 @@
                                     $("#abu32").mouseover(function(){
                                       $("#abu32").html("Adobe PhoneGap")
                                       $("#test32").css("opacity", 0.2)
-                                      $("#abu32").css("cssText", "opacity : 1 !important; font-size: 15px;padding-left:105px")
+                                      $("#abu32").css("cssText", "opacity : 1 !important; font-size: 15px;text-align:center;padding-left:105px")
                                     })
 
                                     $("#abu32").mouseout(function(){
@@ -798,7 +798,7 @@
                                     $("#test33").mouseover(function(){
                                       $("#abu33").html("Apache Cordova")
                                       $("#test33").css("opacity", 0.2)
-                                      $("#abu33").css("cssText", "opacity : 1 !important; font-size: 18px;padding-left:105px")
+                                      $("#abu33").css("cssText", "opacity : 1 !important; font-size: 18px;text-align:center;padding-left:105px")
                                     })
 
                                     $("#test33").mouseout(function(){
@@ -810,7 +810,7 @@
                                     $("#abu33").mouseover(function(){
                                       $("#abu33").html("Apache Cordova")
                                       $("#test33").css("opacity", 0.2)
-                                      $("#abu33").css("cssText", "opacity : 1 !important; font-size: 18px;padding-left:105px")
+                                      $("#abu33").css("cssText", "opacity : 1 !important; font-size: 18px;text-align:center;padding-left:105px")
                                     })
 
                                     $("#abu33").mouseout(function(){
@@ -1070,15 +1070,68 @@
                                     echo '<ul class="kiseli1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 29){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       elseif($row["ID"] == 30){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
 
                                         else echo '<li>' . $row["programs"] . '</li>';
 
                                     }
+
+                                    echo '<script>
+
+                                    $("#test29").mouseover(function(){
+                                      $("#abu29").html("Adobe After Effects")
+                                      $("#test29").css("opacity", 0.2)
+                                      $("#abu29").css("cssText", "opacity : 1 !important; font-size: 16px;text-align:center;padding-left:111px")
+                                    })
+
+                                    $("#test29").mouseout(function(){
+                                      $("#abu29").html("")
+                                      $("#test29").css("opacity", 1)
+                                      $("#abu29").css("opacity", 0)
+                                    })
+
+                                    $("#abu29").mouseover(function(){
+                                      $("#abu29").html("Adobe After Effects")
+                                      $("#test29").css("opacity", 0.2)
+                                      $("#abu29").css("cssText", "opacity : 1 !important; font-size: 16px;text-align:center; padding-left:111px")
+                                    })
+
+                                    $("#abu29").mouseout(function(){
+                                      $("#abu29").html("")
+                                      $("#test29").css("opacity", 1)
+                                      $("#abu29").css("opacity", 0)
+                                    })
+
+                                    $("#test30").mouseover(function(){
+                                      $("#abu30").html("Adobe Premiere Pro")
+                                      $("#test30").css("opacity", 0.2)
+                                      $("#abu30").css("cssText", "opacity : 1 !important; font-size: 16px;text-align:center; padding-left:111px")
+                                    })
+
+                                    $("#test30").mouseout(function(){
+                                      $("#abu30").html("")
+                                      $("#test30").css("opacity", 1)
+                                      $("#abu30").css("opacity", 0)
+                                    })
+
+                                    $("#abu30").mouseover(function(){
+                                      $("#abu30").html("Adobe Premiere Pro")
+                                      $("#test30").css("opacity", 0.2)
+                                      $("#abu30").css("cssText", "opacity : 1 !important; font-size: 16px;text-align:center; padding-left:111px")
+                                    })
+
+                                    $("#abu30").mouseout(function(){
+                                      $("#abu30").html("")
+                                      $("#test30").css("opacity", 1)
+                                      $("#abu30").css("opacity", 0)
+                                    })
+
+                                    </script>';
+
                                     echo '</ul>';
                                 }
                                 ?>
@@ -1104,19 +1157,121 @@
                                     echo '<ul class="kiseli2">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 25){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="height: 63px; width:63px;"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       elseif($row["ID"] == 27){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="height: 63px; width:63px;"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       elseif($row["ID"] == 26){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="height: 63px; width:63px;"> </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       elseif($row["ID"] == 28){
-                                        echo '<li><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="-webkit-filter: grayscale(100%);  filter: grayscale(100%);height: 63px; width:63px;"" > </li>';
+                                        echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       else echo '<li>' . $row["programs"] . '</li>';
                                     }
+
+                                    echo '<script>
+
+                                    $("#test25").mouseover(function(){
+                                      $("#abu25").html("Microsoft Excel")
+                                      $("#test25").css("opacity", 0.2)
+                                      $("#abu25").css("cssText", "opacity : 1 !important; font-size: 18px;text-align:center;padding-left:105px")
+                                    })
+
+                                    $("#test25").mouseout(function(){
+                                      $("#abu25").html("")
+                                      $("#test25").css("opacity", 1)
+                                      $("#abu25").css("opacity", 0)
+                                    })
+
+                                    $("#abu25").mouseover(function(){
+                                      $("#abu25").html("Microsoft Excel")
+                                      $("#test25").css("opacity", 0.2)
+                                      $("#abu25").css("cssText", "opacity : 1 !important; font-size: 18px;text-align:center; padding-left:105px")
+                                    })
+
+                                    $("#abu25").mouseout(function(){
+                                      $("#abu25").html("")
+                                      $("#test25").css("opacity", 1)
+                                      $("#abu25").css("opacity", 0)
+                                    })
+
+                                    $("#test26").mouseover(function(){
+                                      $("#abu26").html("MySQL")
+                                      $("#test26").css("opacity", 0.2)
+                                      $("#abu26").css("cssText", "opacity : 1 !important; font-size: 23px;text-align:center; padding-left:105px")
+                                    })
+
+                                    $("#test26").mouseout(function(){
+                                      $("#abu26").html("")
+                                      $("#test26").css("opacity", 1)
+                                      $("#abu26").css("opacity", 0)
+                                    })
+
+                                    $("#abu26").mouseover(function(){
+                                      $("#abu26").html("MySQL")
+                                      $("#test26").css("opacity", 0.2)
+                                      $("#abu26").css("cssText", "opacity : 1 !important; font-size: 23px;text-align:center; padding-left:105px")
+                                    })
+
+                                    $("#abu26").mouseout(function(){
+                                      $("#abu26").html("")
+                                      $("#test26").css("opacity", 1)
+                                      $("#abu26").css("opacity", 0)
+                                    })
+
+
+
+                                    $("#test27").mouseover(function(){
+                                      $("#abu27").html("SQL")
+                                      $("#test27").css("opacity", 0.2)
+                                      $("#abu27").css("cssText", "opacity : 1 !important; font-size: 23px;text-align:center;padding-left:105px")
+                                    })
+
+                                    $("#test27").mouseout(function(){
+                                      $("#abu27").html("")
+                                      $("#test27").css("opacity", 1)
+                                      $("#abu27").css("opacity", 0)
+                                    })
+
+                                    $("#abu27").mouseover(function(){
+                                      $("#abu27").html("SQL")
+                                      $("#test27").css("opacity", 0.2)
+                                      $("#abu27").css("cssText", "opacity : 1 !important; font-size: 23px;text-align:center; padding-left:105px")
+                                    })
+
+                                    $("#abu27").mouseout(function(){
+                                      $("#abu27").html("")
+                                      $("#test27").css("opacity", 1)
+                                      $("#abu27").css("opacity", 0)
+                                    })
+
+                                    $("#test28").mouseover(function(){
+                                      $("#abu28").html("MongoDB")
+                                      $("#test28").css("opacity", 0.2)
+                                      $("#abu28").css("cssText", "opacity : 1 !important; font-size: 23px;text-align:center; padding-left:105px")
+                                    })
+
+                                    $("#test28").mouseout(function(){
+                                      $("#abu28").html("")
+                                      $("#test28").css("opacity", 1)
+                                      $("#abu28").css("opacity", 0)
+                                    })
+
+                                    $("#abu28").mouseover(function(){
+                                      $("#abu28").html("MongoDB")
+                                      $("#test28").css("opacity", 0.2)
+                                      $("#abu28").css("cssText", "opacity : 1 !important; font-size: 23px;text-align:center; padding-left:105px")
+                                    })
+
+                                    $("#abu28").mouseout(function(){
+                                      $("#abu28").html("")
+                                      $("#test28").css("opacity", 1)
+                                      $("#abu28").css("opacity", 0)
+                                    })
+
+                                    </script>';
                                     echo '</ul>';
                                 }
                                 ?>
