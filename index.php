@@ -1286,7 +1286,7 @@
               if ($count > 0) {
                 while ($row = $result->fetch_assoc()) {
                   echo '<div class="teamMember col-6 col-lg-3 col-md-6">
-                <img src="images/abu.png" alt="abu" width="100%">
+                <img src="images/muha.jpg" alt="muha" width="100%">
                 <h4>' . $row["name"] . '</h4>
                 <div class="memberSocialLinks">
                     <a href=" ' . $row["github"] . ' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
