@@ -107,7 +107,7 @@
             <div class= "col-12 AboutUsCardWrap">
             <?php
             require 'connection.php';
-            $sql = "SELECT * FROM aboutUs";
+            $sql = "SELECT * FROM aboutus";
             $result = $dbc->query($sql);
             $count = $result->num_rows;
             if ($count > 0) {
