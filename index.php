@@ -35,7 +35,7 @@
                           </div>
 
                           <div class="logo" >
-                                <img src="images/abocfinal.png"  style="width:300px;height:200px; background-color: none !important">
+                                <img src="images/abocFInal.png"  style="width:300px;height:200px; background-color: none !important">
                           </div>
 
                           <div class="menu">
@@ -79,7 +79,7 @@
 
     <section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
         <div class="container text-center hidden">
-            <img class="textIntro" src="images/jumbotron.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
+            <img class="textIntro" src="images/jumbotron.png" alt="ABOC Computer Science and IT engineers The best offers and price!">
             <div class="socialLinks">
                 <a href="https://www.instagram.com/bosniant/" target="_blank"  class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
