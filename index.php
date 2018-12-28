@@ -1460,8 +1460,8 @@
                                     <i class="fa fa-envelope mr-2"></i><span class="text">E-mail:</span>
                                 </span>
                                 <span  id="footerEmail" class="col-sm-9 col-9 ml-md-3 col-lg-7">
-                                    <a href="mailto:omar1537@gmail.com" style="text-decoration:none;" class="text-white">
-                                        omar1537@gmail.com</a>
+                                    <a href="mailto:muhamed.hasanspahic@stu.ibu.edu.ba" style="text-decoration:none;" class="text-white">
+                                        muhamed.hasanspahic@stu.ibu.edu.ba</a>
                                 </span>
                             </div>
                         </li>
