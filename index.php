@@ -49,7 +49,7 @@
                           </div>
 
                           <div class="logo" >
-                                <img src="images/abocFInal.png"  style="width:300px;height:200px; background-color: none !important">
+                                <img src="images/abocfinal.png" class="thing"  style="/*width:300px;height:200px; background-color: none !important">
                           </div>
 
 
@@ -60,7 +60,7 @@
                                       <li><a href="#aboutUs" id="aboutLink">about us</a></li>
                                       <li><a href="#skills" id="skillsLink">our skills</a></li>
                                       <li><a href="#team" id="teamLink">our team</a></li>
-
+                                      
                                 </ul>
                           </div>
                     </nav>
@@ -89,7 +89,7 @@
 
     <section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
         <div class="container text-center hidden">
-            <img class="textIntro" src="images/jumbotron.png" alt="ABOC Computer Science and IT engineers The best offers and price!">
+            <img class="textIntro" src="images/textIntro1.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
             <div class="socialLinks">
                 <a href="https://www.instagram.com/bosniant/" target="_blank"  class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
@@ -144,13 +144,13 @@
             <div class= "col-12 AboutUsCardWrap">
             <?php
             require 'connection.php';
-            $sql = "SELECT * FROM aboutus";
+            $sql = "SELECT * FROM aboutUs";
             $result = $dbc->query($sql);
             $count = $result->num_rows;
             if ($count > 0) {
-              while ($row = $result->fetch_assoc()) {
-                echo '<div>' . $row["description"] . '</div>';
-              }
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div>' . $row["description"] . '</div>';
+                }
             }
             ?>
         </div>
@@ -173,7 +173,6 @@
                             $result = $dbc->query($sql);
                             $count = $result->num_rows;
                             if ($count > 0) {
-<<<<<<< HEAD
                                 echo '
                                 <ul class="kiso">
                                   <div class="row">';
@@ -187,25 +186,6 @@
                                         else echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                 }
                                 echo '  <script>
-=======
-                              echo '
-
-
-                                <ul class="kiso">
-                                  <div class="row">';
-                              while ($row = $result->fetch_assoc()) {
-                                if ($row["ID"] == 4) {
-                                  echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                } elseif ($row["ID"] == 6) {
-                                  echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                } else echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-
-
-
-                              }
-
-                              echo '  <script>
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test1").mouseover(function(){
                                       $("#abu1").html("HTML")
                                       $("#test1").css("opacity", 0.2)
@@ -367,14 +347,8 @@
                                       $("#abu8").css("opacity", 0)
                                     })
                             </script>';
-<<<<<<< HEAD
                                 echo
                                 '</div></ul>' ;
-=======
-
-                              echo
-                                '</div></ul>';
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                             }
                             ?>
                                 <!-- <h6 class="skillSubHead">Frontend</h6>
@@ -398,9 +372,8 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-                                  echo '<ul class="kiso">
+                                    echo '<ul class="kiso">
                                     <div class="row">';
-<<<<<<< HEAD
                                     while ($row = $result->fetch_assoc()) {
                                         if($row["ID"] == 14){
                                           echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
@@ -417,23 +390,6 @@
                                         else echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                     }
                                   echo  '<script>
-=======
-                                  while ($row = $result->fetch_assoc()) {
-
-                                    if ($row["ID"] == 14) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 16) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 12) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 15) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } else echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-
-                                  }
-                                  echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   $("#test9").mouseover(function(){
                                     $("#abu9").html("PHP")
                                     $("#test9").css("opacity", 0.2)
@@ -595,12 +551,7 @@
                                     $("#abu16").css("opacity", 0)
                                   })
                           </script>';
-<<<<<<< HEAD
                                     echo '</div></ul>';
-=======
-
-                                  echo '</div></ul>';
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                 }
                                 ?>
                                 <!-- <ul>
@@ -628,22 +579,11 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-<<<<<<< HEAD
                                     echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
                                         echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                     }
                                     echo '<script>
-=======
-                                  echo '<ul class="muhamed">';
-                                  while ($row = $result->fetch_assoc()) {
-
-                                    echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                  }
-
-                                  echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test17").mouseover(function(){
                                       $("#abu17").html("Android")
                                       $("#test17").css("opacity", 0.2)
@@ -685,7 +625,7 @@
                                       $("#abu18").css("opacity", 0)
                                     })
                             </script>';
-                                  echo '</ul>';
+                                    echo '</ul>';
                                 }
                                 ?>
                                 <!-- <ul>
@@ -700,23 +640,12 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-<<<<<<< HEAD
                                     echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 19){
                                         echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                       }
                                       echo '<script>
-=======
-                                  echo '<ul class="muhamed">';
-                                  while ($row = $result->fetch_assoc()) {
-                                    if ($row["ID"] == 19) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    }
-
-                                    echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                       $("#test19").mouseover(function(){
                                         $("#abu19").html("Swift")
                                         $("#test19").css("opacity", 0.2)
@@ -738,8 +667,8 @@
                                         $("#abu19").css("opacity", 0)
                                       })
                                       </script>';
-                                  }
-                                  echo '</ul>';
+                                    }
+                                    echo '</ul>';
                                 }
                                 ?>
                                 <!-- <ul>
@@ -753,7 +682,6 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-<<<<<<< HEAD
                                     echo '<ul class="muhamed1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 33){
@@ -766,21 +694,6 @@
                                         else echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '<script>
-=======
-                                  echo '<ul class="muhamed1">';
-                                  while ($row = $result->fetch_assoc()) {
-                                    if ($row["ID"] == 33) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 32) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 34) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } else echo '<li>' . $row["programs"] . '</li>';
-                                  }
-
-                                  echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test32").mouseover(function(){
                                       $("#abu32").html("Adobe PhoneGap")
                                       $("#test32").css("opacity", 0.2)
@@ -842,13 +755,7 @@
                                       $("#abu34").css("opacity", 0)
                                     })
                                     </script>';
-<<<<<<< HEAD
                                     echo '</ul>';
-=======
-
-
-                                  echo '</ul>';
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                 }
                                 ?>
                                <!--  <ul>
@@ -871,7 +778,6 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-<<<<<<< HEAD
                                     echo '<ul class="kiseli">
                                      <div class="row">';
                                     while ($row = $result->fetch_assoc()) {
@@ -890,26 +796,6 @@
                                       else echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
                                     }
                                     echo '<script>
-=======
-
-                                  echo '<ul class="kiseli">
-                                     <div class="row">';
-                                  while ($row = $result->fetch_assoc()) {
-
-                                    if ($row["ID"] == 20) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 21) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 22) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 31) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } else echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                  }
-
-                                  echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test20").mouseover(function(){
                                       $("#abu20").html("C")
                                       $("#test20").css("opacity", 0.2)
@@ -1031,12 +917,7 @@
                                       $("#abu24").css("opacity", 0)
                                     })
                                     </script>';
-<<<<<<< HEAD
                                     echo '</div></ul>';
-=======
-
-                                  echo '</div></ul>';
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                 }
                                 ?>
                                 <!-- <ul>
@@ -1062,7 +943,6 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-<<<<<<< HEAD
                                     echo '<ul class="kiseli1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 29){
@@ -1074,20 +954,6 @@
                                         else echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '<script>
-=======
-                                  echo '<ul class="kiseli1">';
-                                  while ($row = $result->fetch_assoc()) {
-                                    if ($row["ID"] == 29) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 30) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } else echo '<li>' . $row["programs"] . '</li>';
-
-                                  }
-
-                                  echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test29").mouseover(function(){
                                       $("#abu29").html("Adobe After Effects")
                                       $("#test29").css("opacity", 0.2)
@@ -1129,12 +995,7 @@
                                       $("#abu30").css("opacity", 0)
                                     })
                                     </script>';
-<<<<<<< HEAD
                                     echo '</ul>';
-=======
-
-                                  echo '</ul>';
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                 }
                                 ?>
                                 <!-- <ul>
@@ -1156,7 +1017,6 @@
                                 $result = $dbc->query($sql);
                                 $count = $result->num_rows;
                                 if ($count > 0) {
-<<<<<<< HEAD
                                     echo '<ul class="kiseli2">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 25){
@@ -1174,23 +1034,6 @@
                                       else echo '<li>' . $row["programs"] . '</li>';
                                     }
                                     echo '<script>
-=======
-                                  echo '<ul class="kiseli2">';
-                                  while ($row = $result->fetch_assoc()) {
-                                    if ($row["ID"] == 25) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 27) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 26) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } elseif ($row["ID"] == 28) {
-                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
-                                    } else echo '<li>' . $row["programs"] . '</li>';
-                                  }
-
-                                  echo '<script>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test25").mouseover(function(){
                                       $("#abu25").html("Microsoft Excel")
                                       $("#test25").css("opacity", 0.2)
@@ -1272,7 +1115,7 @@
                                       $("#abu28").css("opacity", 0)
                                     })
                                     </script>';
-                                  echo '</ul>';
+                                    echo '</ul>';
                                 }
                                 ?>
                                 <!-- <ul>
@@ -1294,7 +1137,6 @@
     <article id="team">
         <div class="container">
         <div class="row">
-<<<<<<< HEAD
           <div class="col-12">
               <h2 style="color:#DCDCDC; font-family:arial;">Our team:</h2>
           </div>
@@ -1309,36 +1151,6 @@
                   <h2 class="project__title"><a style="font-size:25px;" href="">Anes K.</a></br></h2>
                   <small class="project__category"><a href="https://www.linkedin.com/in/abdurahman-almonajed-2b4842138/"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
 
-=======
-            <h2>Our team</h2>
-        </div>
-        <div class="row">
-              <?php
-                //require 'connection.php';
-              $sql = "SELECT * FROM team";
-              $result = $dbc->query($sql);
-              $count = $result->num_rows;
-              if ($count > 0) {
-                while ($row = $result->fetch_assoc()) {
-                  echo '<div class="teamMember col-6 col-lg-3 col-md-6">
-                <img src=" data:image/jpeg;base64,' . base64_encode($row["image"]) . '" alt="muha" width="100%">
-                <h4>' . $row["name"] . '</h4>
-                <div class="memberSocialLinks">
-                    <a href=" ' . $row["github"] . ' " target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
-                    <a href=" ' . $row["linkedin"] . '" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <p class="memberIntro">' . $row["position"] . '<br><a href=" ' . $row["educationLink"] . ' " target="_blank"> ' . $row["education"] . '</a></p>
-            </div>';
-                }
-              }
-              ?>
-           <!-- <div class="teamMember col-6 col-lg-3 col-md-6">
-                <img src="images/abu.png" alt="abu" width="100%">
-                <h4>abu</h4>
-                <div class="memberSocialLinks">
-                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
-                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                 </div>
               </div>
             </div>
@@ -1467,8 +1279,8 @@
                 $result = $dbc->query($sql);
                 $count = $result->num_rows;
                 if ($count > 0) {
-                  while ($row = $result->fetch_assoc()) {
-                    echo '<div class="projectWrap col-12 col-md-6">
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="projectWrap col-12 col-md-6">
                         <div class="container">
                             <h3 class="projectHead">' . $row["name"] . '</h3>
                             <div class="row">
@@ -1479,7 +1291,7 @@
                             </div>
                         </div>
                     </div>';
-                  }
+                    }
                 }
                 ?>
 
@@ -1526,7 +1338,6 @@
 
 
     <!-- TODO: promijenit boje -->
-<<<<<<< HEAD
     <footer class="ct-footer">
       <div class="container">
         <form name="contentForm" enctype="multipart/form-data" method="post" action="">
@@ -1625,72 +1436,6 @@
             <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
               <a href="https://goo.gl/maps/38oc3DoVaW22" target="_blank"><img alt="app store" src="images/maps.png" height="60" width="60"></a>
             </div>
-=======
-    <footer>
-        <!--Contact list + mapa / popup + linkovi + copyright-->
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 >Building your dreams in software...</h3>
-                </div>
-                <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-                    <h2 class=" text-uppercase">Contact info</h2>
-
-                    <ul class="list-group list-group-flush text-warning" style=" border:none; background-color: black">
-                        <li class="list-group-item  " style="background-color: black">
-                        <div class="row">
-                            <span class="col-2 col-lg-4">
-                                <i class="fa fa-map-marker mr-2"></i> <span class="text">Address</span>
-                            </span>
-                            <span id="footerAddress" class="col-9 ml-4  offset-md-1 offset-1 col-lg-7">
-                                <a href="#" id="map" data-toggle="modal" data-target="#mapModal" style="text-decoration:none;" class="text-white">Grada Bakua 11, Sarajevo, B&H</a>
-                            </span>
-                            </div>
-                        </li>
-                        <li class="list-group-item" style="background-color: black">
-                            <div class="row">
-                                <span class="col-sm-2 col-2 col-lg-4">
-                                    <i class="fa fa-envelope mr-2"></i><span class="text">E-mail:</span>
-                                </span>
-                                <span  id="footerEmail" class="col-sm-9 col-9 ml-md-3 col-lg-7">
-                                    <a href="mailto:abdulrahman.almonajed@gmail.com" style="text-decoration:none;" class="text-white">
-                                        abdulrahman.almonajed@gmail.com</a>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list-group-item" style="background-color: black">
-                        <div class="row">
-                                <span class="col-2 mt-2 col-lg-5">
-                                    <i class="fa fa-share-alt mr-2"></i> <span class="text">Social media:</span>
-                                </span>
-                                <span class="col-10 col-lg-7">
-                                    <a href="https://www.instagram.com/bosniant/" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
-                                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github"></i></a>
-                                    <a href="https://www.github.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-linkedin"></i></a>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list-group-item" style="background-color: black"></li>
-                    </ul>
-
-                    <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.2453302725744!2d18.349382815303517!3d43.830010879115655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c990fdf0ccc5%3A0xdab20818f84ffaf7!2sGrada+Bakua%2C+Sarajevo+71000!5e0!3m2!1sen!2sba!4v1520858418062"
-                                        width="750" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
->>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
             <div class="col-sm-6 col-md-4">
               <ul class="ct-socials list-unstyled">
