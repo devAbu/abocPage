@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="images/">
     <!-- TODO: napravit logo i dodat ga -->
     <!-- TODO: stranica mora bit responisve -->
 
@@ -20,7 +20,7 @@
     <!-- Custom styles for this template -->
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
@@ -49,7 +49,7 @@
                           </div>
 
                           <div class="logo" >
-                                <img src="images/abocfinal.png" class="thing"  style="/*width:300px;height:200px; background-color: none !important">
+                                <img src="images/abocfinal.png" class="thing"  style="width:300px;height:200px; background-color: none !important">
                           </div>
 
 
@@ -89,7 +89,7 @@
 
     <section id="landing" class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
         <div class="container text-center hidden">
-            <img class="textIntro" src="images/textIntro1.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
+            <img class="textIntro" src="images/textIntro.PNG" alt="ABOC Computer Science and IT engineers The best offers and price!">
             <div class="socialLinks">
                 <a href="https://www.instagram.com/bosniant/" target="_blank"  class="btn btn-lg btn-primary"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-facebook-square"></i></a>
