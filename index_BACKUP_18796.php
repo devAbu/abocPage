@@ -174,6 +174,7 @@
                             $count = $result->num_rows;
                             if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 echo '
                                 <ul class="kiso">
                                   <div class="row">';
@@ -189,6 +190,19 @@
                                 echo '  <script>
 =======
                               echo '
+=======
+                              echo '
+
+
+                                <ul class="kiso">
+                                  <div class="row">';
+                              while ($row = $result->fetch_assoc()) {
+                                if ($row["ID"] == 4) {
+                                  echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                } elseif ($row["ID"] == 6) {
+                                  echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                } else echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
 
                                 <ul class="kiso">
@@ -200,8 +214,14 @@
                                   echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
                                 } else echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
 
+<<<<<<< HEAD
 
 
+                              }
+
+                              echo '  <script>
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
+=======
                               }
 
                               echo '  <script>
@@ -368,9 +388,17 @@
                                     })
                             </script>';
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 echo
                                 '</div></ul>' ;
 =======
+=======
+
+                              echo
+                                '</div></ul>';
+                            }
+
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
                               echo
                                 '</div></ul>';
@@ -401,6 +429,7 @@
                                   echo '<ul class="kiso">
                                     <div class="row">';
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     while ($row = $result->fetch_assoc()) {
                                         if($row["ID"] == 14){
                                           echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" ><img src="'.$row["programs"].'" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
@@ -418,6 +447,8 @@
                                     }
                                   echo  '<script>
 =======
+=======
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   while ($row = $result->fetch_assoc()) {
 
                                     if ($row["ID"] == 14) {
@@ -433,6 +464,9 @@
                                   }
                                   echo '<script>
 
+<<<<<<< HEAD
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
+=======
 >>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   $("#test9").mouseover(function(){
                                     $("#abu9").html("PHP")
@@ -596,7 +630,12 @@
                                   })
                           </script>';
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '</div></ul>';
+=======
+
+                                  echo '</div></ul>';
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 =======
 
                                   echo '</div></ul>';
@@ -629,6 +668,7 @@
                                 $count = $result->num_rows;
                                 if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
                                         echo '<div class="col-4 offset-2"><li id="test'.$row["ID"].'" >' . $row["programs"] . '</li><span id="abu'.$row["ID"].'" class="combe"></span></div>';
@@ -637,6 +677,15 @@
 =======
                                   echo '<ul class="muhamed">';
                                   while ($row = $result->fetch_assoc()) {
+=======
+                                  echo '<ul class="muhamed">';
+                                  while ($row = $result->fetch_assoc()) {
+
+                                    echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                  }
+
+                                  echo '<script>
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
                                     echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
                                   }
@@ -701,6 +750,7 @@
                                 $count = $result->num_rows;
                                 if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '<ul class="muhamed">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 19){
@@ -708,11 +758,18 @@
                                       }
                                       echo '<script>
 =======
+=======
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   echo '<ul class="muhamed">';
                                   while ($row = $result->fetch_assoc()) {
                                     if ($row["ID"] == 19) {
                                       echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
                                     }
+<<<<<<< HEAD
+=======
+
+                                    echo '<script>
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
                                     echo '<script>
 
@@ -754,6 +811,7 @@
                                 $count = $result->num_rows;
                                 if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '<ul class="muhamed1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 33){
@@ -767,6 +825,8 @@
                                     }
                                     echo '<script>
 =======
+=======
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   echo '<ul class="muhamed1">';
                                   while ($row = $result->fetch_assoc()) {
                                     if ($row["ID"] == 33) {
@@ -780,6 +840,9 @@
 
                                   echo '<script>
 
+<<<<<<< HEAD
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
+=======
 >>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test32").mouseover(function(){
                                       $("#abu32").html("Adobe PhoneGap")
@@ -848,6 +911,9 @@
 
 
                                   echo '</ul>';
+<<<<<<< HEAD
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
+=======
 >>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                 }
                                 ?>
@@ -872,6 +938,7 @@
                                 $count = $result->num_rows;
                                 if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '<ul class="kiseli">
                                      <div class="row">';
                                     while ($row = $result->fetch_assoc()) {
@@ -891,6 +958,25 @@
                                     }
                                     echo '<script>
 =======
+=======
+
+                                  echo '<ul class="kiseli">
+                                     <div class="row">';
+                                  while ($row = $result->fetch_assoc()) {
+
+                                    if ($row["ID"] == 20) {
+                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                    } elseif ($row["ID"] == 21) {
+                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                    } elseif ($row["ID"] == 22) {
+                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                    } elseif ($row["ID"] == 31) {
+                                      echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                    } else echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" >' . $row["programs"] . '</li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
+                                  }
+
+                                  echo '<script>
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
                                   echo '<ul class="kiseli">
                                      <div class="row">';
@@ -1032,7 +1118,12 @@
                                     })
                                     </script>';
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '</div></ul>';
+=======
+
+                                  echo '</div></ul>';
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 =======
 
                                   echo '</div></ul>';
@@ -1063,6 +1154,7 @@
                                 $count = $result->num_rows;
                                 if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '<ul class="kiseli1">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 29){
@@ -1075,6 +1167,8 @@
                                     }
                                     echo '<script>
 =======
+=======
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   echo '<ul class="kiseli1">';
                                   while ($row = $result->fetch_assoc()) {
                                     if ($row["ID"] == 29) {
@@ -1082,6 +1176,13 @@
                                     } elseif ($row["ID"] == 30) {
                                       echo '<div class="col-4 offset-2"><li id="test' . $row["ID"] . '" ><img src="' . $row["programs"] . '" alt="Front-end" height=40 width=40 style="  -webkit-filter: grayscale(100%);  filter: grayscale(100%); height: 63px; width:63px;"></li><span id="abu' . $row["ID"] . '" class="combe"></span></div>';
                                     } else echo '<li>' . $row["programs"] . '</li>';
+<<<<<<< HEAD
+=======
+
+                                  }
+
+                                  echo '<script>
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 
                                   }
 
@@ -1130,7 +1231,12 @@
                                     })
                                     </script>';
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '</ul>';
+=======
+
+                                  echo '</ul>';
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
 =======
 
                                   echo '</ul>';
@@ -1157,6 +1263,7 @@
                                 $count = $result->num_rows;
                                 if ($count > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     echo '<ul class="kiseli2">';
                                     while ($row = $result->fetch_assoc()) {
                                       if($row["ID"] == 25){
@@ -1175,6 +1282,8 @@
                                     }
                                     echo '<script>
 =======
+=======
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                   echo '<ul class="kiseli2">';
                                   while ($row = $result->fetch_assoc()) {
                                     if ($row["ID"] == 25) {
@@ -1190,6 +1299,9 @@
 
                                   echo '<script>
 
+<<<<<<< HEAD
+>>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
+=======
 >>>>>>> 94a4527d88d946f0587cf6ac01db05a8079adf0b
                                     $("#test25").mouseover(function(){
                                       $("#abu25").html("Microsoft Excel")
