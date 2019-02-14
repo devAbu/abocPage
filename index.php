@@ -60,7 +60,9 @@
                                       <li><a href="#aboutUs" id="aboutLink">about us</a></li>
                                       <li><a href="#skills" id="skillsLink">our skills</a></li>
                                       <li><a href="#team" id="teamLink">our team</a></li>
-                                      
+                                      <li><a href="#projects" id="projectsLink">our projects</a></li>
+
+
                                 </ul>
                           </div>
                     </nav>
