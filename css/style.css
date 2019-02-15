@@ -21,8 +21,6 @@ body {
       float: left;
       margin: 16px -11px;
       margin-top: -28px;
-
-
 }
 
 nav {
@@ -830,7 +828,7 @@ address a:hover {
   .ct-section_header--type4 + p {
     font-size: 28px;
   }
-
+}
 
 
 /*footer*/
