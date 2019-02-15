@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/">
+    <link rel="icon" href="images/abocfinal_icon.ico">
     <!-- TODO: napravit logo i dodat ga -->
     <!-- TODO: stranica mora bit responisve -->
 
@@ -56,7 +56,7 @@
 
 
                           <div class="menu">
-                                <ul>
+                                <ul id="navRes">
                                       <li><a href="#aboutUs" id="aboutLink">about us</a></li>
                                       <li><a href="#skills" id="skillsLink">our skills</a></li>
                                       <li><a href="#team" id="teamLink">our team</a></li>
@@ -64,7 +64,6 @@
                                 </ul>
                           </div>
                     </nav>
-
               </header>
 
               <script type="text/javascript">
@@ -1236,7 +1235,7 @@
                 <!-- Pod moranjem--> <script  src="dist/js/jquery.hover3d.js" ></script>
 
 
-              <!--OVa scripta pod moranjem-->
+              <!--OVa scripta pod moranjem
               <script>
                 $(document).ready(function(){
                   $(".project").hover3d({
@@ -1250,15 +1249,10 @@
                   });
                 });
 
-              </script>
-              </body>
+              </script>-->
 
               <!--Ovdje zavrsava team members-->
-
-
-
             </article>
-              </html>
 
             </div>
 

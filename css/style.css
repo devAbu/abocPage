@@ -43,6 +43,10 @@ nav ul {
 
 }
 
+#navRes{
+  padding: 0px;
+}
+
 nav.black ul {
       background: #000;
 }
@@ -493,7 +497,7 @@ a {
   padding-bottom: 50px ;
   padding-top: 50px;
   margin-left: -25px;
-  width: 109%;
+  width: 104%;
 
 }
 .ct-footer-post .inner-left,
