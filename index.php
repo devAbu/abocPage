@@ -1147,7 +1147,7 @@
               <div class="project__card">
                 <a href="" class="project__image"><img src="MALIK.jpg" width=300 height=200 alt=""></a>
                 <div class="project__detail">
-                  <h2 class="project__title"><a style="font-size:25px;" href="">Anes K.</a></br></h2>
+                  <h2 class="project__title"><a style="font-size:25px;" href="">Anes K.</a><br></h2>
                   <small class="project__category"><a href="https://www.linkedin.com/in/abdurahman-almonajed-2b4842138/"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
 
                 </div>
@@ -1163,8 +1163,8 @@
                           <div class="project__card">
                             <a href="" class="project__image"><img src="MALIK.jpg" width=300 height=200 alt=""></a>
                             <div class="project__detail">
-                              <h2 class="project__title"><a style="font-size:25px;" href="">Muhamed H.</a></br></h2>
-                              <small class="project__category"><a href="https://www.linkedin.com/in/abdurahman-almonajed-2b4842138/"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
+                              <h2 class="project__title"><a style="font-size:25px;" href="">Muhamed H.</a><br></h2>
+                              <small class="project__category"><a href="https://www.linkedin.com"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
 
                             </div>
                           </div>
@@ -1179,7 +1179,7 @@
                           <div class="project__card">
                             <a href="" class="project__image"><img src="MALIK.jpg" width=300 height=200 alt=""></a>
                             <div class="project__detail">
-                              <h2 class="project__title"><a style="font-size:25px;" href="">Obada A.</a></br></h2>
+                              <h2 class="project__title"><a style="font-size:25px;" href="">Obada A.</a><br></h2>
                               <small class="project__category"><a href="https://www.linkedin.com/in/abdurahman-almonajed-2b4842138/"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
 
                             </div>
@@ -1197,7 +1197,7 @@
               <div class="project__card">
                 <a href="" class="project__image"><img src="MALIK.jpg" width=300 height=200 alt=""></a>
                 <div class="project__detail">
-                  <h2 class="project__title"><a style="font-size:25px;" href="">Abu O.</a></br></h2>
+                  <h2 class="project__title"><a style="font-size:25px;" href="">Abu O.</a><br></h2>
                   <small class="project__category"><a href="https://www.linkedin.com/in/abdurahman-almonajed-2b4842138/"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
 
                 </div>
@@ -1213,7 +1213,7 @@
                 <div class="project__card">
                   <a href="" class="project__image"><img src="MALIK.jpg" width=300 height=200 alt=""></a>
                   <div class="project__detail">
-                    <h2 class="project__title"><a style="font-size:25px;" href="">Omar H.</a></br></h2>
+                    <h2 class="project__title"><a style="font-size:25px;" href="">Omar H.</a><br></h2>
                     <small class="project__category"><a href="https://www.linkedin.com/in/abdurahman-almonajed-2b4842138/"><img src="dist/images/Li.png" alt="L.jpg" height="30" width="30" padding="20" style="margin:2px;"></a> <a href="https://www.instagram.com/?hl=en"><img src="dist/images/Octocat.png" alt="LINKD logo.png" height="30" width="30" style="margin:2px;"/></a></small>
 
                   </div>
@@ -1274,16 +1274,31 @@
                 $count = $result->num_rows;
                 if ($count > 0) {
                     while ($row = $result->fetch_assoc()) {
+                      if($row['link'] != ""){
+                        echo '<div class="projectWrap col-12 col-md-6">
+                        <a href="'.$row["link"].'">
+                        <div class="container">
+                            <p class="projectHead display-4">' . $row["name"] . '</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src=" data:image/jpeg;base64,' . base64_encode($row["image"]) . '" width="100%">
+                                </div>
+                            </div>
+                        </div> </a>
+                    </div>';
+                      }else {
                         echo '<div class="projectWrap col-12 col-md-6">
                         <div class="container">
                             <p class="projectHead display-4">' . $row["name"] . '</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <img src="images/LIS.png" width="100%">
+                                    <img src=" data:image/jpeg;base64,' . base64_encode($row["image"]) . '" width="100%">
                                 </div>
                             </div>
                         </div>
                     </div>';
+                      }
+                        
                     }
                 }
                 ?>
@@ -1346,7 +1361,7 @@
             <h2 class="ct-footer-list-header">Home</h2>
             <ul>
               <li>
-                <a href="#landing">Back to homepage</a>
+                <a href="#landing">Back to the top</a>
               </li>
 
             </ul>
@@ -1355,7 +1370,7 @@
             <h2 class="ct-footer-list-header">Our Projects</h2>
             <ul>
               <li>
-                <a href="#projects">Bosnian Turist Travel</a>
+                <a href="#projects">Bosnian Tourist Travel</a>
               </li>
               <li>
                 <a href="#projects">Library Information system</a>
@@ -1364,16 +1379,16 @@
                 <a href="#projects">Cinema Reservation system</a>
               </li>
               <li>
-                <a href="#projects">.......</a>
+                <a href="#projects">CATALOG - WOOL CARPET</a>
               </li>
               <li>
-                <a href="#projects">.......</a>
+                <a href="#projects">HOTEL MANAGEMENT SYSTEM</a>
               </li>
               <li>
-                <a href="#projects">........</a>
+                <a href="#projects">FACE RECOGNITION</a>
               </li>
               <li>
-                <a href="#projects">.........</a>
+                <a href="#projects">... and more</a>
               </li>
             </ul>
           </li>
@@ -1417,13 +1432,13 @@
         <div class="ct-footer-meta text-center-sm">
           <div class="row">
             <div class="col-sm-6 col-md-2">
-              <img alt="logo" src="images/abocfinal.png" height="90" width="130">
+              <img alt="logo" src="images/abocfinal.png" style="margin-top:-50px;" height="200" width="270">
             </div>
             <div class="col-sm-6 col-md-3">
               <address>
-                <span>ABOC<br></span>Grada Bakua 11<br>
+                <span style="font-size: 20px;">ABOC<br></span>Bulevar Meše Selimovića<br>
                 Sarajevo, BiH, 71000<br>
-                <span>Phone: <a href="https://www.bhtelecom.ba/">(+387) 62 123 321</a></span>
+                <span>Phone: <a href="tel:+38762123321">(+387) 62 123 321</a></span>
               </address>
             </div>
             <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
@@ -1481,7 +1496,7 @@
             </ul>
           </div>
           <div class="inner-right">
-            <p>Copyright © 2018 ABOC.&nbsp;<a href="https://www.cookiebot.com/en/privacy-policy-cookies/?gclid=EAIaIQobChMIv8a9u9aY3wIVhcCyCh14NwkMEAAYASAAEgIQ5vD_BwE">Privacy Policy</a></p>
+            <p>Copyright © 2018 ABOC.&nbsp;<a href="#">Privacy Policy</a></p>
             <p><a class="ct-u-motive-color" href="" target="_blank">Web Design</a> by ABOC</p>
           </div>
         </div>
