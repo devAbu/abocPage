@@ -130,6 +130,8 @@
 
     <article id="aboutUs">
         <div class="container">
+          <div class="row">
+<div class="OFFSET-2 col-10">
             <h2>About us: </h2>
             <!--<div>
                 We are a professional team, working around the world since 2014. Our motive is that every customer is 100% satisfied with our work without adding additional costs.
@@ -140,6 +142,7 @@
                 --- Work 6 days a week - if necessary 7 days
                 --- We are available for work 24/7 every day
             </div> -->
+
             <div class= "col-12 AboutUsCardWrap">
             <?php
             require 'connection.php';
@@ -153,6 +156,8 @@
             }
             ?>
         </div>
+        </div>
+    </div>
     </div>
     </article>
 
@@ -1298,7 +1303,7 @@
                         </div>
                     </div>';
                       }
-                        
+
                     }
                 }
                 ?>
@@ -1432,7 +1437,7 @@
         <div class="ct-footer-meta text-center-sm">
           <div class="row">
             <div class="col-sm-6 col-md-2">
-              <img alt="logo" src="images/abocfinal.png" style="margin-top:-50px;" height="200" width="270">
+              <img alt="logo" src="images/abocfinal.png" style="margin-top:-50px;" height="185" width="270">
             </div>
             <div class="col-sm-6 col-md-3">
               <address>
